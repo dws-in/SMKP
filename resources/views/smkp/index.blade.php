@@ -14,64 +14,36 @@
                             <table class="divide-y divide-gray-200" width="1000">
                                 <thead>
                                 <tr>
-                                    <th scope="col" width="50" class="px-6 py-3 bg-black text-left text-xs font-medium text-white uppercase tracking-wider">
+                                    <th colspan="3" scope="col" width="50" class="px-6 py-3 bg-black text-left text-xs font-medium text-white uppercase tracking-wider">
                                         Element
                                     </th>
-                                    <!-- <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Requirement
-                                    </th> -->
                                 </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
-                                <!-- @php 
-                                    $prev_el = '';
-                                    $prev_req = '';
-                                    foreach ($data as $row) {
-                                        if ($row->element == $prev_el) {
-
-                                            $row->element = '';
-                                        }
-                                        else {
-                                            $prev_el = $row->element;
-                                        }
-                                        echo "<tr>";
-                                        echo "<td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->element."</td>";
-                                        echo "<td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td>";
-                                        echo "</tr>";
-                                    }
-                                @endphp -->
-
                                 
                                 @php 
                                     $prev_el = '';
-                                    $prev_req = '';
                                     foreach ($data as $row) {
                                         if ($row->element == $prev_el) {
-                                            echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td></tr>";
+                                            echo "<tr>
+                                                <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->number."</td>
+                                                <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td>
+                                            </tr>";
                                             $row->element = '';
                                         }
                                         else {
                                             if ($row->element != '') {
-                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->element."</td>";
+                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->id."</td>
+                                                    <td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->element."</td></tr>";
                                             }
                                             if ($row->requirement != NULL) {
-                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td></tr>";
+                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->number."</td>
+                                                    <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td></tr>";
                                             }
                                             $prev_el = $row->element;
                                         }
                                     }
                                 @endphp
-<!-- 
-                                @foreach ($data as $row)
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $row->element }}
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $row->requirement }}
-                                        </td>
-                                    </tr>
-                                @endforeach -->
                                 </tbody>
                             </table>
                         </div>

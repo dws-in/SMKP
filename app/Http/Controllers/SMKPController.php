@@ -11,8 +11,8 @@ class SMKPController extends Controller
     {
         $data = DB::table('elements')
             ->leftJoin('requirements', 'elements.id', '=', 'requirements.element_id')
-            ->select('elements.id', 'elements.title as element', 'requirements.title as requirement')
-            ->orderBy('id')
+            ->select('elements.id', 'elements.title as element', 'requirements.number as number', 'requirements.title as requirement')
+            ->orderByRaw('id, number')
             ->get();
             
         return view('smkp.index')->with('data', $data);
