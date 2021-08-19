@@ -209,13 +209,13 @@ iframe {
 }
 
 .wrap-login100 {
-    width: 960px;
+    width: 1000px;
     background: #da1414;
     background: -webkit-linear-gradient(-135deg, #da1414, #ffffff);
     background: -o-linear-gradient(-135deg, #da1414, #ffffff);
     background: -moz-linear-gradient(-135deg, #da1414, #ffffff);
     background: linear-gradient(-135deg, #da1414, #ffffff);
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
 
     display: -webkit-box;

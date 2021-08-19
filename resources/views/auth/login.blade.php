@@ -59,20 +59,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.ico') }}" />
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/animate/animate.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/css-hamburgers/hamburgers.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
     <!--===============================================================================================-->
 
 </head>
@@ -105,20 +105,20 @@
                             autocomplete="current-password" />
                     </div>
 
-                    <div class="block mt-4">
+                    {{-- <div class="block mt-4">
                         <label for="remember_me" class="flex items-center">
                             <x-jet-checkbox id="remember_me" name="remember" />
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                         </label>
-                    </div>
+                    </div> --}}
 
                     <div class="flex items-center justify-end mt-4">
-                        @if (Route::has('password.request'))
+                        {{-- @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900"
                                 href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
-                        @endif
+                        @endif --}}
 
                         <x-jet-button class="ml-4">
                             {{ __('Log in') }}
@@ -131,10 +131,10 @@
         <!--===============================================================================================-->
         <script src="https://colorlib.com/etc/lf/Login_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
         <!--===============================================================================================-->
-        <script src="vendor/bootstrap/js/popper.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('login-asset/bootstrap/js/popper.js') }}"></script>
+        <script src="{{ asset('login-asset/bootstrap/js/bootstrap.min.js') }}"></script>
         <!--===============================================================================================-->
-        <script src="vendor/select2/select2.min.js"></script>
+        <script src="{{ asset('login-asset/select2/select2.min.js') }}"></script>
         <!--===============================================================================================-->
         <script src="https://colorlib.com/etc/lf/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
         <script>
@@ -143,7 +143,7 @@
             })
         </script>
         <!--===============================================================================================-->
-        <script src="js/login.js"></script>
+        <script src="{{ asset('js/login.js') }}"></script>
 
 </body>
 
