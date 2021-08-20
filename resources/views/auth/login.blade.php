@@ -93,16 +93,24 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
-                    <div>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <x-jet-label for="username" value="{{ __('Username') }}" />
-                        <x-jet-input id="username" class="block mt-1 w-full" type="username" name="username"
+                        <x-jet-input id="username" class="block mt-1 w-full input100" type="username" name="username"
                             :value="old('username')" required autofocus />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
                     </div>
 
-                    <div class="mt-4">
+                    <div class="wrap-input100 validate-input mt-4" data-validate="Password is required">
                         <x-jet-label for="password" value="{{ __('Password') }}" />
-                        <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                            autocomplete="current-password" />
+                        <x-jet-input id="password" class="block mt-1 w-full input100" type="password" name="password"
+                            required autocomplete="current-password" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
                     </div>
 
                     {{-- <div class="block mt-4">
