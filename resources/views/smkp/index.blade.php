@@ -24,23 +24,23 @@
                                 @php 
                                     $prev_el = '';
                                     foreach ($data as $row) {
-                                        if ($row->element == $prev_el) {
+                                        if ($row->e_title == $prev_el) {
                                             echo "<tr>
-                                                <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->number."</td>
-                                                <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td>
+                                                <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->r_number."</td>
+                                                <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->r_title."</td>
                                             </tr>";
-                                            $row->element = '';
+                                            $row->e_title = '';
                                         }
                                         else {
-                                            if ($row->element != '') {
-                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->id."</td>
-                                                    <td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->element."</td></tr>";
+                                            if ($row->e_title != '') {
+                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->e_number."</td>
+                                                    <td class=\"px-6 py-4 whitespace-nowrap text-sm text-white bg-gray-500\" style=\"word-wrap: break-word\">".$row->e_title."</td></tr>";
                                             }
-                                            if ($row->requirement != NULL) {
-                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->number."</td>
-                                                    <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->requirement."</td></tr>";
+                                            if ($row->r_title != NULL) {
+                                                echo "<tr><td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->r_number."</td>
+                                                    <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\" style=\"word-wrap: break-word\">".$row->r_title."</td></tr>";
                                             }
-                                            $prev_el = $row->element;
+                                            $prev_el = $row->e_title;
                                         }
                                     }
                                 @endphp

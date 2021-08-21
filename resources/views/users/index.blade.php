@@ -60,17 +60,18 @@
                                             </span>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                                                <a href="{{ route('users.show', $user->id) }}" class="">View</a>
-                                            </span>
-                                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                                                <a href="{{ route('users.edit', $user->id) }}" class="">Edit</a>
-                                            </span>
-                                            <form class="inline-block" action="{{ route('users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Delete selected item?');">
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <input type="submit" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800" value="Delete">
-                                            </form>
+                                            <a href="{{ route('users.show', $user->id) }}" class="px-2 inline-flex btn rounded-md font-semibold bg-blue-100 text-blue-800">
+                                                <i class="fas fa-folder-open"></i>
+                                                <span class="px-2">{{ __('View') }}</span>
+                                            </a>
+                                            <a href="{{ route('users.edit', $user->id) }}" class="px-2 inline-flex btn rounded-md font-semibold bg-yellow-100 text-yellow-800">
+                                                <i class="fas fa-edit"></i>
+                                                <span class="px-2">{{ __('Edit') }}</span>
+                                            </a>
+                                            <a href="{{ route('users.destroy', $user->id) }}" class="px-2 inline-flex btn rounded-md font-semibold bg-red-100 text-red-800" onclick="return confirm('Delete selected item?');">
+                                                <i class="fas fa-trash-alt"></i>
+                                                <span class="px-2">{{ __('Delete') }}</span>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach

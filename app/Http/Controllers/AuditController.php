@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
-use PhpParser\Node\Expr\FuncCall;
 
-class SMKPController extends Controller
+class AuditController extends Controller
 {
 
     public function index()
+    {
+        //
+    }
+
+    public function create()
     {
         $data = DB::table('elements')
             ->leftJoin('requirements', 'elements.id', '=', 'requirements.element_id')
@@ -17,11 +21,6 @@ class SMKPController extends Controller
             ->get();
             
         return view('smkp.index')->with('data', $data);
-    }
-
-    public function create()
-    {
-        //
     }
 
     public function store()

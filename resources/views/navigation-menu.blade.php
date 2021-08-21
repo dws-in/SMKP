@@ -6,8 +6,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <span class="font-semibold text-xs text-white uppercase text-xl">SMKP</span>
-                        {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
+                        <x-application-logo class="block h-10 w-auto fill-current text-white-600" />
                     </a>
                 </div>
 
@@ -66,8 +65,8 @@
                 </div>
                 @endcan
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.*')">
-                        <span class="navbar-text font-bold text-white">{{ __('Support') }}</span>
+                    <x-jet-nav-link href="{{ route('supports.create') }}" :active="request()->routeIs('users.*')">
+                        <span class="navbar-text font-bold text-white">{{ __('Contact us') }}</span>
                     </x-jet-nav-link>
                 </div>
 
@@ -83,7 +82,8 @@
                             </button>
                         @else
                             <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                <span class="navbar-text font-bold text-white">{{ Auth::user()->name }}</span>
+                                <i class="fas fa-user text-white"></i>
+                                <span class="px-2 navbar-text font-bold text-white">{{ Auth::user()->name }}</span>
 
                                 <div class="ml-1">
                                     <svg class="fill-current h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -93,7 +93,7 @@
                             </button>
                         @endif
                     </x-slot>
-11
+
                     <x-slot name="content">
                         <!-- Account Management -->
                         <div class="block px-4 py-2 text-xs text-gray-400">
@@ -101,7 +101,8 @@
                         </div>
 
                         <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                            {{ __('Profile') }}
+                            <i class="fas fa-address-card"></i>
+                            <span class="px-2">{{ __('Profile') }}</span>
                         </x-jet-dropdown-link>
 
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -116,10 +117,9 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-jet-dropdown-link href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
-                                {{ __('Logout') }}
+                            <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="px-2">{{ __('Log out') }}</span>
                             </x-jet-dropdown-link>
                         </form>
                     </x-slot>
@@ -181,35 +181,6 @@
                         {{ __('Logout') }}
                     </x-jet-responsive-nav-link>
                 </form>
-
-                <!-- Team Management -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="border-t border-gray-200"></div>
-
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Manage Team') }}
-                    </div>
-
-                    <!-- Team Settings -->
-                    <x-jet-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" :active="request()->routeIs('teams.show')">
-                        {{ __('Team Settings') }}
-                    </x-jet-responsive-nav-link>
-
-                    <x-jet-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
-                        {{ __('Create New Team') }}
-                    </x-jet-responsive-nav-link>
-
-                    <div class="border-t border-gray-200"></div>
-
-                    <!-- Team Switcher -->
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Switch Teams') }}
-                    </div>
-
-                    @foreach (Auth::user()->allTeams() as $team)
-                        <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />
-                    @endforeach
-                @endif
             </div>
         </div>
     </div>
