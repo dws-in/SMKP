@@ -1,10 +1,10 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            {{-- <x-jet-authentication-card-logo /> --}}
-               <span class="navbar-text font-bold text-3xl">SMKP</span>
-                 {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
-        </x-slot>
+        <x-slot name="logo"> --}}
+{{-- <x-jet-authentication-card-logo /> --}}
+{{-- <span class="navbar-text font-bold text-3xl">SMKP</span> --}}
+{{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
+{{-- </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
 
@@ -19,12 +19,14 @@
 
             <div>
                 <x-jet-label for="username" value="{{ __('Username') }}" />
-                <x-jet-input id="username" class="block mt-1 w-full" type="username" name="username" :value="old('username')" required autofocus />
+                <x-jet-input id="username" class="block mt-1 w-full" type="username" name="username"
+                    :value="old('username')" required autofocus />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                    autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
@@ -36,7 +38,8 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                        href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
@@ -46,7 +49,114 @@
                 </x-jet-button>
             </div>
         </form>
-    </x-jet-authentication-card>
+    </x-jet-authentication-card> --}}
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <title>Login </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.ico') }}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/bootstrap/css/bootstrap.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/animate/animate.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/css-hamburgers/hamburgers.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('login-asset/select2/select2.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
+    <!--===============================================================================================-->
+
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/sig.png" alt="IMG">
+                </div>
+                @if (session('status'))
+                    <div class="mb-4 font-medium text-sm text-green-600">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <x-jet-label for="username" value="{{ __('Username') }}" />
+                        <x-jet-input id="username" class="block mt-1 w-full input100" type="username" name="username"
+                            :value="old('username')" required autofocus />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input mt-4" data-validate="Password is required">
+                        <x-jet-label for="password" value="{{ __('Password') }}" />
+                        <x-jet-input id="password" class="block mt-1 w-full input100" type="password" name="password"
+                            required autocomplete="current-password" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    {{-- <div class="block mt-4">
+                        <label for="remember_me" class="flex items-center">
+                            <x-jet-checkbox id="remember_me" name="remember" />
+                            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                        </label>
+                    </div> --}}
+
+                    <div class="flex items-center justify-end mt-4">
+                        {{-- @if (Route::has('password.request'))
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                                href="{{ route('password.request') }}">
+                                {{ __('Forgot your password?') }}
+                            </a>
+                        @endif --}}
+
+                        <x-jet-button class="ml-4">
+                            {{ __('Log in') }}
+                        </x-jet-button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--===============================================================================================-->
+        <script src="https://colorlib.com/etc/lf/Login_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('login-asset/bootstrap/js/popper.js') }}"></script>
+        <script src="{{ asset('login-asset/bootstrap/js/bootstrap.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('login-asset/select2/select2.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="https://colorlib.com/etc/lf/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
+        <script>
+            $('.js-tilt').tilt({
+                scale: 1.1
+            })
+        </script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('js/login.js') }}"></script>
+
+</body>
+
+</html>
+
 
 {{-- <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-md w-full space-y-8">
@@ -106,4 +216,4 @@
     </form>
   </div>
 </div> --}}
-</x-guest-layout>
+{{-- </x-guest-layout> --}}

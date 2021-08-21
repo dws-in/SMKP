@@ -9,14 +9,12 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function() {
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
   return view('dashboard');
 })->name('dashboard');
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
   Route::resource('users', UserController::class);
   Route::resource('supports', SupportController::class);
   Route::resource('smkp', SMKPController::class);
-    
 });
-
