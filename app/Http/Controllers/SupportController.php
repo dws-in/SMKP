@@ -31,4 +31,5 @@ class SupportController extends Controller
         // return redirect()->route('support.create')->with('alert', 'Email sent successfully!');
         return redirect()->back()->with('message', 'Pesan berhasil dikirim');
     }
+    
 }

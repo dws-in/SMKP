@@ -27,8 +27,8 @@
                                         if ($row->e_title == $prev_el) {
                                             ?>
                                             <tr>
-                                                <td class="px-6 py-4 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_number }}</td>
-                                                <td class="px-6 py-4 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_title }}</td>
+                                                <td class="px-4 py-2 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_number }}</td>
+                                                <td class="px-4 py-2 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_title }}</td>
                                             </tr>
                                             <?php
                                             $row->e_title = '';
@@ -36,14 +36,14 @@
                                         else {
                                             if ($row->e_title != '') {
                                                 ?>
-                                                <tr><td class="px-6 py-4 text-sm text-white bg-gray-500" style="word-wrap: break-word">{{ $row->e_number }}</td>
-                                                    <td class="px-6 py-4 text-sm text-white bg-gray-500" style="word-wrap: break-word">{{ $row->e_title }}</td></tr>
+                                                <tr><td class="px-4 py-2 text-sm text-white bg-gray-500" style="word-wrap: break-word">{{ $row->e_number }}</td>
+                                                    <td class="px-4 py-2 text-sm text-white bg-gray-500" style="word-wrap: break-word">{{ $row->e_title }}</td></tr>
                                                 <?php
                                             }
                                             if ($row->r_title != NULL) {
                                                 ?>
-                                                <tr><td class="px-6 py-4 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_number }}</td>
-                                                    <td class="px-6 py-4 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_title }}</td></tr>
+                                                <tr><td class="px-4 py-2 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_number }}</td>
+                                                    <td class="px-4 py-2 text-sm text-grey-900" style="word-wrap: break-word">{{ $row->r_title }}</td></tr>
                                                 <?php
                                             }
                                             $prev_el = $row->e_title;

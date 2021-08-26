@@ -9,18 +9,24 @@ class AuditController extends Controller
 
     public function index()
     {
-        //
-    }
-
-    public function create()
-    {
-        $data = DB::table('elements')
-            ->leftJoin('requirements', 'elements.id', '=', 'requirements.element_id')
-            ->select('elements.id', 'elements.number as e_number', 'elements.title as e_title', 'requirements.number as r_number', 'requirements.title as r_title')
-            ->orderByRaw('id, r_number')
+        $elements = DB::table('elements')
             ->get();
             
-        return view('smkp.index')->with('data', $data);
+        return view('audit.index')->with('elements', $elements);
+    }
+
+    public function show($id)
+    {
+        $element = DB::table('elements')
+            ->select('id', 'title')
+            ->where('id', '=', $id )
+            ->first();
+        $requirements = DB::table('requirements')
+            ->select('id', 'number', 'title', 'element_id')
+            ->where('element_id', '=', $id )
+            ->get();
+            
+        return view('audit.create')->with('element', $element)->with('requirements', $requirements);
     }
 
     public function store()
@@ -28,7 +34,7 @@ class AuditController extends Controller
         //
     }
 
-    public function show()
+    public function create()
     {
         //
     }

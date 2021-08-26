@@ -18,6 +18,8 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}" defer></script>
+
+  <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/ecc15350d3.js" crossorigin="anonymous"></script>
 </head>
 
