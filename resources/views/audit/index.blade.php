@@ -14,7 +14,7 @@
                             <table class="divide-y divide-gray-200 w-full" style="border-spacing: 0px; table-layout: auto;">
                                 <thead>
                                     <tr>
-                                        <th colspan="2" scope="col" class="px-6 py-3 bg-gray-500 text-xs font-medium text-white uppercase tracking-wider text-center">
+                                        <th colspan="2" scope="col" class="px-6 py-3 bg-gray-500 text-base font-medium text-white uppercase tracking-wider text-center">
                                             Kriteria
                                         </th>
                                     </tr>
@@ -22,8 +22,8 @@
                                 <tbody class="bg-white divide-y divide-red-200">
                                     @foreach ($elements as $element)
                                     <tr>
-                                        <td class="px-4 py-2 text-sm text-grey-900 bg-blue-100" style="word-wrap: break-word">{{ $element->number }}</td>
-                                        <td class="px-4 py-2 text-sm text-grey-900" style="word-wrap: break-word">
+                                        <td class="pl-4 py-2 text-sm text-grey-900 bg-blue-100" style="word-wrap: break-word">{{ $element->number }}</td>
+                                        <td class="px-2 py-2 text-sm text-grey-900 bg-blue-100" style="word-wrap: break-word">
                                             <a href="{{ route('audits.show', $element->id) }}">{{ $element->title }}</a>
                                         </td>
                                     </tr>
