@@ -15,7 +15,7 @@ class SupportController extends Controller
 {
 
     public function index(){
-        return view('support.create');
+        return view('support.index');
     }
 
     public function create()

@@ -16,6 +16,8 @@
                                 @foreach ($requirements as $requirement)
                                 <div class="form-group">
                                     <div class="px-4 py-4 flex">
+                                        <input type="hidden" name="id_req{{$requirement->id}}" value="{{$requirement->id}}">
+                                        <input type="hidden" name="id_el" value="{{$requirement->element_id}}">
                                         <p class="flex-initial">{{ $requirement->number }}</p>
                                         <p class="px-2 flex-auto">{{ $requirement->title }}</p>
                                     </div>
