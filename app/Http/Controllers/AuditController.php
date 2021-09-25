@@ -33,7 +33,7 @@ class AuditController extends Controller
     {
         
         $query = DB::table('requirements')->where('element_id', '=' ,$request->input('id_el'))->get();
-        
+        ddd($request);
         foreach ($query as $requirement) {
             $save[] = array(
                 'id' => 1,
