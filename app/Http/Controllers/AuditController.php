@@ -29,20 +29,25 @@ class AuditController extends Controller
         return view('audit.create')->with('element', $element)->with('requirements', $requirements);
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        
         $query = DB::table('requirements')->where('element_id', '=' ,$request->input('id_el'))->get();
+        
         foreach ($query as $requirement) {
             $save[] = array(
+                'id' => 1,
                 'id_req'    =>   $request->input('id_req'.$requirement->id),
-                // 'id_el'     =>   $request->input('id_el'.$requirement->element_id)
+                'id_el'     =>   $request->input('id_el'),
+                'jawaban'   =>  'v',
             );
         }
-        ddd($save);
+        // ddd($request);
         
         DB::table('answer')->insert($save);
         return redirect('audit.create');
     }
+
 
     public function create()
     {

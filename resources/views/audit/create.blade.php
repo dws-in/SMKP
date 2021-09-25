@@ -34,7 +34,15 @@
 
                                 </div>
                                 @endforeach
-
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Default file input example</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
