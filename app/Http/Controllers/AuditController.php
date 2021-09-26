@@ -118,13 +118,19 @@ class AuditController extends Controller
             } elseif($jawab == $nilai4 || $jawab == $nilai4v1 || $jawab == $nilai4v2 || $jawab == $nilai4v3){
                 $rest = 4;
                 break;
+            } else{
+                unset($nilai0[$i]);unset($nilai0v1[$i]);unset($nilai0v2[$i]);unset($nilai0v3[$i]);
+                unset($nilai1[$i]);unset($nilai1v1[$i]);unset($nilai1v2[$i]);unset($nilai1v3[$i]);
+                unset($nilai2[$i]);unset($nilai2v1[$i]);unset($nilai2v2[$i]);unset($nilai2v3[$i]);
+                unset($nilai3[$i]);unset($nilai3v1[$i]);unset($nilai3v2[$i]);unset($nilai3v3[$i]);
+                unset($jawab[$i]);
             }
         }
 
-        ddd($rest);
+        ddd(Auth::user()->username);
 
         $nilai = array(
-            'id_answer' => Auth::user()->name,
+            'id_answer' => Auth::user()->username,
             'id_el'     => $request->input('id_el'),
             'nilai'     => $rest
         );
