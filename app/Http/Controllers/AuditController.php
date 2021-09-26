@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuditController extends Controller
 {
@@ -49,6 +51,32 @@ class AuditController extends Controller
             );
         }
 
+        ddd(Auth::user()->role_id);
+
+        for($i = 0; $i < count($nilai0); $i++) {
+            if($nilai0[$i] == "v - x" && $nilai0[$i+1] == "v - x"){
+
+            }elseif($nilai1[$i] == "v - x" && $nilai1[$i+1] == "v - x"){
+
+            }elseif($nilai2[$i] == "v - x" && $nilai2[$i+1] == "v - x"){
+
+            }elseif($nilai3[$i] == "v - x" && $nilai3[$i+1] == "v - x"){
+
+            }elseif($nilai4[$i] == "v - x" && $nilai4[$i+1] == "v - x"){
+
+            }elseif($nilai0[$i] == "v - x"){
+
+            }elseif($nilai1[$i] == "v - x"){
+
+            }elseif($nilai2[$i] == "v - x"){
+
+            }elseif($nilai3[$i] == "v - x"){
+
+            }elseif($nilai4[$i] == "v - x"){
+
+            }
+        }
+
         $rest = 0;
         if($jawab == $nilai0){
             $rest = 0;
@@ -61,6 +89,8 @@ class AuditController extends Controller
         } elseif($jawab == $nilai4){
             $rest = 4;
         }
+
+        ddd($rest);
 
         $nilai = array(
             'id_answer' => Auth::user()->name,
@@ -80,7 +110,6 @@ class AuditController extends Controller
 
         return redirect('audits/'.$page);
     }
-
 
     public function create()
     {
