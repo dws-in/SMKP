@@ -25,21 +25,21 @@
                                     </div>
                                     <div class="radio">
                                         <div class="px-4 py-2 form-check">
-                                            <label><input value=v type="radio" name="radio{{$requirement->id}}">True</label>
+                                            <label><input value=v type="radio" name="radio{{$requirement->id}}">  True</label>
                                         </div>
                                         <div class="px-4 py-2 form-check">
-                                            <label><input value=x type="radio" name="radio{{$requirement->id}}">False</label>
+                                            <label><input value=x type="radio" name="radio{{$requirement->id}}">  False</label>
                                         </div>
                                     </div>
                                 </div>
                                 @endforeach
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12 px-4">
                                     <div class="form-group">
-                                    <strong>Post Image:</strong>
+                                    <strong>Attachment:</strong>
                                         <input type="file" name="image" class="form-control" placeholder="Post Title">
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row px-4 mt-3 mb-2">
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
                                     </div>
@@ -48,7 +48,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 </x-app-layout>
