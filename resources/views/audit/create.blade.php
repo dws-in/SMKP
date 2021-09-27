@@ -33,9 +33,11 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                <div class="mb-3">
-                                    <label for="image" class="form-label">Default file input example</label>
-                                    <input class="form-control" type="file" id="formFile">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                    <strong>Post Image:</strong>
+                                        <input type="file" name="image" class="form-control" placeholder="Post Title">
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">

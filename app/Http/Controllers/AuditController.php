@@ -33,10 +33,13 @@ class AuditController extends Controller
 
     public function store(Request $request)
     {
-        
+
         $query = DB::table('requirements')->where('element_id', '=' ,$request->input('id_el'))->get();
 
         foreach ($query as $requirement) {
+            $request->validate([
+                'radio'.$requirement->id => 'required'
+            ]);
             $nilai0[] = $requirement->n0;
             $nilai1[] = $requirement->n1;
             $nilai2[] = $requirement->n2;
@@ -127,12 +130,13 @@ class AuditController extends Controller
             }
         }
 
-        ddd(Auth::user()->username);
+        $path = $request->file('image')->store('public/images');
 
         $nilai = array(
             'id_answer' => Auth::user()->username,
             'id_el'     => $request->input('id_el'),
-            'nilai'     => $rest
+            'nilai'     => $rest,
+            'image'     => $path
         );
  
         $page = $request->input('id_el') + 100;
