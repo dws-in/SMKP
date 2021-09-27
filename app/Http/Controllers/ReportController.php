@@ -14,6 +14,11 @@ class ReportController extends Controller
         $elements = DB::table('elements')
             ->get();
             
-        return view('report.index');
+        return view('report.test');
+    }
+
+    public function edit($id, $uid)
+    {
+
     }
 }

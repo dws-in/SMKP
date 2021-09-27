@@ -36,7 +36,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 px-4">
                                     <div class="form-group">
                                     <strong>Attachment:</strong>
-                                        <input type="file" name="image" class="form-control" placeholder="Post Title">
+                                        <input type="file" name="image" class="form-control" style="border: thin solid black; border-radius: 5px;" placeholder="Post Title">
                                     </div>
                                 </div>
                                 <div class="row px-4 mt-3 mb-2">

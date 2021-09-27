@@ -122,11 +122,7 @@ class AuditController extends Controller
                 $rest = 4;
                 break;
             } else{
-                unset($nilai0[$i]);unset($nilai0v1[$i]);unset($nilai0v2[$i]);unset($nilai0v3[$i]);
-                unset($nilai1[$i]);unset($nilai1v1[$i]);unset($nilai1v2[$i]);unset($nilai1v3[$i]);
-                unset($nilai2[$i]);unset($nilai2v1[$i]);unset($nilai2v2[$i]);unset($nilai2v3[$i]);
-                unset($nilai3[$i]);unset($nilai3v1[$i]);unset($nilai3v2[$i]);unset($nilai3v3[$i]);
-                unset($jawab[$i]);
+                $jawab[$i]='x';
             }
         }
 
