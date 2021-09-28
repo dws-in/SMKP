@@ -9,6 +9,7 @@ use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -17,11 +18,21 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = DB::table('users')
-            ->join('roles', 'users.role_id', '=', 'roles.id')
-            ->get();
-            
-        return view('users.index')->with('users', $users);
+        $role = Auth::user()->role_id;
+
+        // Only Administrator can access this page
+        if ($role == 1) {
+            $users = DB::table('users')
+                ->join('roles', 'users.role_id', '=', 'roles.id')
+                ->get();
+
+            return view('users.index')->with('users', $users);
+        }
+
+        else {
+            abort(Response::HTTP_FORBIDDEN, '403 Forbidden');
+        }
+
     }
 
     public function create()
