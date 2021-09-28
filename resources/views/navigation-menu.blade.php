@@ -54,13 +54,11 @@
                     </x-jet-dropdown>
                 </div>
 
-                <!-- @can('tryout_access') -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('audits.index') }}" :active="request()->routeIs('audits.*')">
                         <span class="navbar-text font-bold text-white">{{ __('Audit') }}</span>
                     </x-jet-nav-link>
                 </div>
-                <!-- @endcan -->
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('report.index') }}" :active="request()->routeIs('users.*')">

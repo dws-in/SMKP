@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class AuditController extends Controller
 {
 
     public function index()
     {
-        // $role = Auth::user()->role_id;
+        $role = Auth::user()->role_id;
+
         // if ($role <= 2) {
             $elements = DB::table('elements')
                 ->get();
