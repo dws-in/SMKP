@@ -3,16 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class AuditController extends Controller
 {
 
     public function index()
     {
-        $elements = DB::table('elements')
-            ->get();
-            
-        return view('audit.index')->with('elements', $elements);
+        // $role = Auth::user()->role_id;
+        // if ($role <= 2) {
+            $elements = DB::table('elements')
+                ->get();
+
+            return view('audit.index')->with('elements', $elements);
+        // }
+
+        // else {
+        //     abort(Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // }
     }
 
     public function show($id)
@@ -25,7 +34,7 @@ class AuditController extends Controller
             ->select('id', 'number', 'title', 'element_id')
             ->where('element_id', '=', $id )
             ->get();
-            
+
         return view('audit.create')->with('element', $element)->with('requirements', $requirements);
     }
 
