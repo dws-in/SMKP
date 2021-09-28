@@ -63,13 +63,13 @@
                 <!-- @endcan -->
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.*')">
+                    <x-jet-nav-link href="{{ route('report.index') }}" :active="request()->routeIs('users.*')">
                         <span class="navbar-text font-bold text-white">{{ __('Laporan') }}</span>
                     </x-jet-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('supports.create') }}" :active="request()->routeIs('users.*')">
+                    <x-jet-nav-link href="{{ route('supports.index') }}" :active="request()->routeIs('users.*')">
                         <span class="navbar-text font-bold text-white">{{ __('Contact us') }}</span>
                     </x-jet-nav-link>
                 </div>
