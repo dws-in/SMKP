@@ -133,8 +133,6 @@ class AuditController extends Controller
             }
         }
 
-        ddd($rest);
-
         $path = $request->file('image')->store('public/images');
 
         $nilai = array(

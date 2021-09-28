@@ -14,9 +14,8 @@ class ReportController extends Controller
         $data = DB::table('answer')
             ->join('nilai', 'answer.id_el', '=', 'nilai.id_el')
             ->join('requirements', 'requirements.element_id', '=', 'answer.id_el')
+            ->select('answer.jawaban as value', 'requirements.title as rule', 'answer.id_req as kode', 'nilai.image as image')
             ->get();
-
-        ddd($data);
             
         return view('report.test')->with('data', $data);
     }
