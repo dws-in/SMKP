@@ -70,10 +70,10 @@
                                             {{$row->value}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{$row->image}}
+                                            <img src="{{ asset('storage/'.$row->image)}}" width="100px">
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            Niali Auditee
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-20">
+                                            {{$row->result}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             Nilai Auditor

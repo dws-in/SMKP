@@ -47,7 +47,8 @@ class AuditController extends Controller
 
         foreach ($query as $requirement) {
             $request->validate([
-                'radio'.$requirement->id => 'required'
+                'radio'.$requirement->id => 'required',
+                'image' => 'image|file|max:1024'
             ]);
             $nilai0[] = $requirement->n0;
             $nilai1[] = $requirement->n1;
@@ -135,7 +136,7 @@ class AuditController extends Controller
             }
         }
 
-        $path = $request->file('image')->store('public/images');
+        $path = $request->file('image')->store('post-images');
 
         $nilai = array(
             'id_answer' => Auth::user()->username,
