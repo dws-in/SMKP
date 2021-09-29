@@ -22,17 +22,8 @@
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Kode
                                     </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Type
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Desc
-                                    </th>
-                                    <th scope="col" width="200" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Persyaratan
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-xs text-center font-medium text-gray-500 uppercase tracking-wider">
-                                        Checklist Attitude
                                     </th>
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Attachment
@@ -43,48 +34,50 @@
                                     <th scope="col" class="px-6 py-3 bg-gray-50  text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Nilai Auditor
                                     </th>
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-center  text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Action
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                 @php($a = 0)
                                 
-                                @foreach (array_combine($data, $index) as $row => $ind)
+                                @foreach ($data as $row)
                                     <tr>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             company
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
-                                            {{$ind}}
+                                            
                                             @php ($a++)  
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
-                                            {{$row->kode}}
+                                            {{$row->number}}
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            tipe
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            desc
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{$row->rule}}
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">
-                                            {{$row->value}}
+                                        <td class="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-900">
+                                            {{$row->title}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             <img src="{{ asset('storage/'.$row->image)}}" width="100px">
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-20">
-                                            {{$row->result}}
+                                        <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-20">
+                                            {{$row->nilai}}
+                                        </td>
+                                        <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
+                                            Nilai Auditor
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            Nilai Auditor
+                                            <a class="btn btn-primary" href="{{ route('report.show', $row->link) }}" role="button">Detail</a>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Launch demo modal
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
+                            @include('report.edit')
                         </div>
                     </div>
                 </div>
