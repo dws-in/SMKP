@@ -17,7 +17,7 @@
                     </x-jet-nav-link>
                 </div>
 
-                @can('users_access')
+                @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-jet-dropdown align="right" width="48">
@@ -42,27 +42,25 @@
                                 <i class="fas fa-clipboard-list"></i>
                                 <span class="px-2">{{ __('Kriteria Audit SMKP Minerba') }}</span>
                             </x-jet-dropdown-link>
-
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                <i class="fas fa-user-tag"></i>
-                                <span class="px-2">{{ __('Role') }}</span>
+                            @if(Auth::user()->role_id == 1)
+                            <x-jet-dropdown-link href="{{ route('users.index') }}">
+                                <i class="fas fa-users"></i>
+                                <span class="px-2">{{ __('Daftar Pengguna') }}</span>
                             </x-jet-dropdown-link>
-
-                                <x-jet-dropdown-link href="{{ route('users.index') }}">
-                                    <i class="fas fa-users"></i>
-                                    <span class="px-2">{{ __('Daftar Pengguna') }}</span>
-                                </x-jet-dropdown-link>
+                            @endif
 
                         </x-slot>
                     </x-jet-dropdown>
                 </div>
-                @endcan
-
+                @endif
+                
+                @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 3)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('audits.index') }}" :active="request()->routeIs('audits.*')">
                         <span class="navbar-text font-bold text-white">{{ __('Audit') }}</span>
                     </x-jet-nav-link>
                 </div>
+                @endif
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('report.index') }}" :active="request()->routeIs('users.*')">
