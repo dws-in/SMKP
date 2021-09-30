@@ -24,7 +24,11 @@
                                     <tr>
                                         <td class="pl-4 py-2 text-sm text-grey-900 bg-blue-100" style="word-wrap: break-word">{{ $element->number }}</td>
                                         <td class="px-2 py-2 text-sm text-grey-900 bg-blue-100" style="word-wrap: break-word">
+                                            @if($element->id % 10000 !=0)
                                             <a href="{{ route('audits.show', $element->id) }}">{{ $element->title }}</a>
+                                            @else
+                                            <a >{{ $element->title }}</a>
+                                            @endif
                                         </td>
                                     </tr>
                                     @endforeach
