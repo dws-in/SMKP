@@ -45,7 +45,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -53,12 +53,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
+  from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
+  from {transform:scale(0)}
   to {transform:scale(1)}
 }
 
@@ -130,7 +130,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                 @php($a = 0)
-                                
+
                                 @foreach ($data as $row)
                                     <tr>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
@@ -184,14 +184,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                    <div class="flex items-center justify-start px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                                        <a href="{{ route('report.update', $id->id) }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
+                                                            Create New User
+                                                        </a>
+                                                    </div>
                                                 </div>
                                                 </div>
                                             </div>
                                             </div>
                                         </td>
                                     </tr>
-                                    @php ($a++)  
+                                    @php ($a++)
                                 @endforeach
                                 </tbody>
                             </table>
@@ -222,7 +226,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
+    span.onclick = function() {
     modal.style.display = "none";
     }
     }
