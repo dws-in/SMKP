@@ -14,16 +14,16 @@ class AuditController extends Controller
     {
         $role = Auth::user()->role_id;
 
-        // if ($role <= 2) {
+        if ($role == 1 || $role == 3) {
             $elements = DB::table('elements')
                 ->get();
 
             return view('audit.index')->with('elements', $elements);
-        // }
+        }
 
-        // else {
-        //     abort(Response::HTTP_FORBIDDEN, '403 Forbidden');
-        // }
+        else {
+            abort(Response::HTTP_FORBIDDEN, '403 Forbidden');
+        }
     }
 
     public function show($id)
