@@ -184,11 +184,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <div class="flex items-center justify-start px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                                        <a href="{{ route('report.update', $id->id) }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
-                                                            Create New User
-                                                        </a>
-                                                    </div>
+                                                    <button type="button" class="btn btn-primary">Save</button>
                                                 </div>
                                                 </div>
                                             </div>

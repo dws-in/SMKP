@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class ReportController extends Controller
 {
@@ -41,12 +42,18 @@ class ReportController extends Controller
 
     public function update($id, $request)
     {
-        DB::table('nilai')
-        ->where('id_el', '=', $id)
-        ->update([
-            'nilai' => $request
-        ]);
+        $role = Auth::user()->role_id;
+        if ($role == 2) {
+            DB::table('nilai')
+            ->where('id_el', '=', $id)
+            ->update([
+                'nilai' => $request
+            ]);
 
-        return redirect()->route('report.show');
+            return redirect()->route('report.show');
+        }
+        else {
+            abort(Response::HTTP_FORBIDDEN, '403 Forbidden');
+        }
     }
 }
