@@ -57,7 +57,6 @@ class AuditController extends Controller
             $nilai4[] = $requirement->n4;
             $jawab[] = $request->input('radio'.$requirement->id);
             $save[] = array(
-                'id' => Auth::user()->name,
                 'id_req'    =>   $request->input('id_req'.$requirement->id),
                 'id_el'     =>   $request->input('id_el'),
                 'jawaban'   =>  $request->input('radio'.$requirement->id),
@@ -139,9 +138,10 @@ class AuditController extends Controller
         $path = $request->file('image')->store('post-images');
 
         $nilai = array(
-            'id_answer' => Auth::user()->username,
+            'id_answer' => Auth::user()->id.date('m-Y'),
             'id_el'     => $request->input('id_el'),
             'nilai'     => $rest,
+            'nilai_auditor' => 0,
             'image'     => $path
         );
 
@@ -163,14 +163,16 @@ class AuditController extends Controller
         //
     }
 
-    public function edit()
+    public function edit(Request $request, $id)
     {
-        //
+        $data[''] = DB::table('nilai')->find($id);
+        return $data;
     }
 
-    public function update()
+    public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        $status = DB::table('nilai')->where('id', $id)->update($input);
     }
 
     public function destroy()

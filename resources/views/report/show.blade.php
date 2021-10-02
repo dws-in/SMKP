@@ -86,6 +86,51 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 100%;
   }
 }
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+
+/* 
+
+for zoom animation 
+uncomment this part if you haven't added this code anywhere else
+
+*/
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
 </style>
 <x-app-layout>
     <x-slot name="header">
@@ -147,25 +192,21 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             <!-- <img src="{{ asset('storage/'.$row->image)}}" width="100px"> -->
-                                            <img id="myImg" onclick="ShowModal('myModal-<?= asset('storage/'.$row->image)?>')" src="{{ asset('storage/'.$row->image)}}" alt="Snow" style="width:100px">
-                                            <!-- The Modal -->
-                                            <div id=id="myModal-<?= asset('storage/'.$row->image); ?>" class="modal">
-                                            <span class="close">&times;</span>
-                                            <img class="modal-content" id="img01">
-                                            <div id="caption"></div>
-                                            </div>
+                                            <a class="image-popup-no-margins" href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg">
+                                                <img src="{{ asset('storage/'.$row->image)}}" width="107" height="75">
+                                            </a>
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-20">
                                             {{$row->nilai}}
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
-                                            Nilai Auditor
+                                            {{$row->auditor}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             <a class="btn btn-primary" href="{{ route('report.show', $row->link) }}" role="button">Detail</a>
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-                                            Edit
+                                                Beri Nilai
                                             </button>
                                             <!-- Modal -->
                                             <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -203,29 +244,41 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </div>
 
     <script>
-    // Get the modal
+    $(document).ready(function() {
 
-    function ShowModal(id){
-    var modal = document.getElementById(id);
+    $('.image-popup-vertical-fit').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+        
+    });
 
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("myImg");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-    }
+    $('.image-popup-fit-width').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        image: {
+            verticalFit: false
+        }
+    });
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    $('.image-popup-no-margins').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+        image: {
+            verticalFit: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300 // don't foget to change the duration also in CSS
+        }
+    });
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
-    }
-    }
+    });
     </script>
-
 </x-app-layout>

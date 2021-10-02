@@ -6,14 +6,13 @@ use App\Http\Controllers\SupportController;
 use App\Http\Controllers\SMKPController;
 use App\Http\Controllers\AuditController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
   return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-  return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::group(['middleware' => 'auth'], function () {
   Route::resource('users', UserController::class);

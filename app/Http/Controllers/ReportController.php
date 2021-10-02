@@ -16,7 +16,7 @@ class ReportController extends Controller
         $data = DB::table('nilai')
         ->join('elements', 'elements.id', '=', 'nilai.id_el')
         ->select('elements.title as title', 'elements.number as number', 'nilai.nilai as nilai',
-        'nilai.image as image', 'nilai.id_el as link')
+        'nilai.image as image', 'nilai.id_el as link', 'nilai.nilai_auditor as auditor')
         ->get();
 
 
