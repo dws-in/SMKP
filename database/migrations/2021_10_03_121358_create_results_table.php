@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNilaiTable extends Migration
+class CreateResultsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateNilaiTable extends Migration
      */
     public function up()
     {
-        Schema::create('nilai', function (Blueprint $table) {
+        Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->string('id_answer');
             $table->string('id_user');
-            $table->string('id_el');
-            $table->string('nilai');
-            $table->string('nilai_auditor');
-            $table->string('image');
+            $table->string('id_answer');
+            $table->string('periode');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateNilaiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nilais');
+        Schema::dropIfExists('results');
     }
 }

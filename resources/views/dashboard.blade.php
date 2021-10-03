@@ -129,14 +129,14 @@
                             <table class="min-w-full divide-y divide-gray-200 w-full">
                                 <thead>
                                     <tr>
-                                        <th scope="col" width="50"
+                                        <!-- <th scope="col" width="50"
                                             class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Company
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Periode
-                                        </th>
+                                        </th> -->
                                         <th scope="col"
                                             class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Kode
@@ -156,12 +156,12 @@
                                     @foreach($data as $row)
                                     @if($row->id % 10000 == 0)
                                     <tr>
-                                        <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
+                                        <!-- <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             company
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             ----
-                                        </td>
+                                        </td> -->
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             {{$row->number}}
                                         </td>
@@ -169,7 +169,7 @@
                                             {{$row->title}}
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
-                                            ---
+                                            {{$row->n_elemen}}
                                         </td>
                                     </tr>
                                     @endif

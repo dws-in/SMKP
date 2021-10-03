@@ -59,6 +59,7 @@ class AuditController extends Controller
             $save[] = array(
                 'id_req'    =>   $request->input('id_req'.$requirement->id),
                 'id_el'     =>   $request->input('id_el'),
+                'id_answer' => Auth::user()->id.date('mY'),
                 'jawaban'   =>  $request->input('radio'.$requirement->id),
             );
         }
@@ -138,7 +139,8 @@ class AuditController extends Controller
         $path = $request->file('image')->store('post-images');
 
         $nilai = array(
-            'id_answer' => Auth::user()->id.date('m-Y'),
+            'id_answer' => Auth::user()->id.date('mY'),
+            'id_user'   => Auth::user()->id,
             'id_el'     => $request->input('id_el'),
             'nilai'     => $rest,
             'nilai_auditor' => 0,
@@ -150,6 +152,15 @@ class AuditController extends Controller
         if(DB::table('requirements')->where('element_id', '=', $page)->doesntExist()){
             $page = intval($page/10000);
             $page = ($page+1)*10000 + 100;
+        }
+
+        if(DB::table('results')->where('id_answer', '=', Auth::user()->id.date('mY'))->doesntExist()){
+            $result = array(
+                'id_answer' => Auth::user()->id.date('mY'),
+                'id_user'   => Auth::user()->id,
+                'periode'   => date('M Y'),
+            );
+            DB::table('results')->insert($result);
         }
 
         DB::table('nilai')->insert($nilai);
@@ -175,8 +186,5 @@ class AuditController extends Controller
         $status = DB::table('nilai')->where('id', $id)->update($input);
     }
 
-    public function destroy()
-    {
-        //
-    }
+
 }
