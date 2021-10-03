@@ -20,10 +20,20 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+  <!-- Magnific Popup core CSS file -->
+  <link rel="stylesheet" href="{{ asset('css/magnific-popup/magnific-popup.css') }}" type="text/css">
+
+  <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- Magnific Popup core JS file -->
+  <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
   @livewireStyles
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
+ 
 
   <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/ecc15350d3.js" crossorigin="anonymous"></script>
@@ -55,6 +65,7 @@
   @livewireScripts
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="{ asset('js/magnific-popup/jquery.magnific-popup.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
 </body>
 
 </html>

@@ -10,14 +10,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ReportController extends Controller
 {
-    //
-
     public function edit($id)
     {
         $data = DB::table('nilai')
         ->join('elements', 'elements.id', '=', 'nilai.id_el')
         ->select('elements.title as title', 'elements.number as number', 'nilai.nilai as nilai',
-        'nilai.image as image', 'nilai.id_el as link', 'nilai.nilai_auditor as auditor')
+        'nilai.image as image', 'nilai.id_el as link', 'nilai.nilai_auditor as auditor', 'nilai.id as id')
         ->where('nilai.id_user', '=', $id)
         ->get();
 
@@ -44,17 +42,18 @@ class ReportController extends Controller
         return view('report.user')->with('data', $data);
     }
 
-    public function update($id, $request)
+    public function update(Request $request, $id)
     {
         $role = Auth::user()->role_id;
         if ($role == 2) {
-            DB::table('nilai')
+            $test = DB::table('nilai')
             ->where('id_el', '=', $id)
             ->update([
-                'nilai' => $request
+                'nilai_auditor' => $request->value
             ]);
+            ddd($test);
 
-            return redirect()->route('report.show');
+            return redirect('');
         }
         else {
             abort(Response::HTTP_FORBIDDEN, '403 Forbidden');

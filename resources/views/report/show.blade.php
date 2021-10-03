@@ -1,92 +1,4 @@
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
 /* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
 	padding: 0;
@@ -101,13 +13,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	padding: 0;
 }
 
-
-/* 
-
-for zoom animation 
-uncomment this part if you haven't added this code anywhere else
-
-*/
 
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
@@ -131,6 +36,7 @@ uncomment this part if you haven't added this code anywhere else
 .mfp-with-zoom.mfp-removing.mfp-bg {
 	opacity: 0;
 }
+
 </style>
 <x-app-layout>
     <x-slot name="header">
@@ -185,10 +91,10 @@ uncomment this part if you haven't added this code anywhere else
                                             {{$row->title}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            <!-- <img src="{{ asset('storage/'.$row->image)}}" width="100px"> -->
-                                            <a class="image-popup-no-margins" href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg">
-                                                <img src="{{ asset('storage/'.$row->image)}}" width="107" height="75">
+                                            <a class="image-popup-vertical-fit" href="{{ asset('storage/'.$row->image)}}">
+                                                <img src="{{ asset('storage/'.$row->image)}}" width="75" height="75">
                                             </a>
+                                            </div>
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-20">
                                             {{$row->nilai}}
@@ -211,16 +117,20 @@ uncomment this part if you haven't added this code anywhere else
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
+                                                <form action="{{ route('report.update', $row->id) }}" method="POST">
+                                                @csrf
+                                                @method('PUT')
                                                 <div class="mb-3">
                                                     <label for="exampleInputEmail1" class="form-label">Masukkan Nilai</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    <input type="text" class="form-control" name="value" value="{{ old('value', $row->auditor) }}" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                     <div id="emailHelp" class="form-text">Range 0-4</div>
                                                 </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                    <button type="submit" class="btn btn-primary">Save</button>
                                                 </div>
+                                                </form>
                                                 </div>
                                             </div>
                                             </div>
@@ -236,43 +146,42 @@ uncomment this part if you haven't added this code anywhere else
             </div>
         </div>
     </div>
-
-    <script>
-    $(document).ready(function() {
-
-    $('.image-popup-vertical-fit').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        mainClass: 'mfp-img-mobile',
-        image: {
-            verticalFit: true
-        }
-        
-    });
-
-    $('.image-popup-fit-width').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        image: {
-            verticalFit: false
-        }
-    });
-
-    $('.image-popup-no-margins').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        fixedContentPos: true,
-        mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-        image: {
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300 // don't foget to change the duration also in CSS
-        }
-    });
-
-    });
-    </script>
 </x-app-layout>
+<script>
+$(document).ready(function() {
+
+$('.image-popup-vertical-fit').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    mainClass: 'mfp-img-mobile',
+    image: {
+        verticalFit: true
+    }
+    
+});
+
+$('.image-popup-fit-width').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    image: {
+        verticalFit: false
+    }
+});
+
+$('.image-popup-no-margins').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+        verticalFit: true
+    },
+    zoom: {
+        enabled: true,
+        duration: 300 // don't foget to change the duration also in CSS
+    }
+});
+
+});
+</script>
