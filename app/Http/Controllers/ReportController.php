@@ -31,13 +31,12 @@ class ReportController extends Controller
         return view('report.index')->with('data', $data);
     }
 
-    public function show($id, $id_assess)
+    public function show($id)
     {
         $data = DB::table('answer')
             ->leftJoin('requirements', 'requirements.id', '=', 'answer.id_req')
             ->select('answer.jawaban as value', 'requirements.title as rule', 'answer.id_req as kode')
             ->where('answer.id_el', '=', $id)
-            ->where('answer.id_answer', '=', $id_assess)
             ->get();
 
         return view('report.user')->with('data', $data);

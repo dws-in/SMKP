@@ -103,7 +103,7 @@
                                             {{$row->auditor}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            <a class="btn btn-primary" href="{{ route('report.show', $row->link, $row->answer) }}" role="button">Detail</a>
+                                            <a class="btn btn-primary" href="{{ route('report.show', $row->link) }}" role="button">Detail</a>
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
                                                 Beri Nilai
