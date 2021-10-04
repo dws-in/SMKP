@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Report
+            My Report
         </h2>
     </x-slot>
     <div class="py-12">
@@ -15,12 +15,6 @@
                                 <tr>
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         No
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Name
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Company
                                     </th>
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Periode
@@ -37,23 +31,15 @@
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             {{$a}}
                                         </td>
-                                        <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
-                                            {{$row->name}}
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{$row->company}}
-                                        </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">
-                                            {{$row->date}}
+                                            {{$row->periode}}
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
-                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('report.destroy', $row->answer) }}" method="POST">
+                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('report.destroy', $row->id_answer) }}" method="POST">
                                                 <a class="btn btn-primary" href="{{ route('report.edit', $row->id) }}" role="button">Detail</a>
                                                 @csrf
                                                 @method('DELETE')
-                                                @if(Auth::user()->role_id == 1)
                                                 <button type="submit" class="btn btn-danger">Delete</button>
-                                                @endif
                                             </form>    
                                         </td>
                                     </tr>

@@ -62,11 +62,21 @@
                 </div>
                 @endif
 
+                @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('report.index') }}" :active="request()->routeIs('users.*')">
                         <span class="navbar-text font-bold text-white">{{ __('Report') }}</span>
                     </x-jet-nav-link>
                 </div>
+                @endif
+
+                @if(Auth::user()->role_id == 3)
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('result.index') }}" :active="request()->routeIs('users.*')">
+                        <span class="navbar-text font-bold text-white">{{ __('Report') }}</span>
+                    </x-jet-nav-link>
+                </div>
+                @endif
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('supports.index') }}" :active="request()->routeIs('users.*')">

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserReportController extends Controller
 {
@@ -13,7 +15,11 @@ class UserReportController extends Controller
      */
     public function index()
     {
-        //
+        $data = DB::table('results')
+        ->where('id_user', '=', Auth::user()->id)
+        ->get();
+
+        return view('report.my')->with('data', $data);
     }
 
     /**

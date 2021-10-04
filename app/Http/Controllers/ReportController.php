@@ -15,7 +15,7 @@ class ReportController extends Controller
         $data = DB::table('nilai')
         ->join('elements', 'elements.id', '=', 'nilai.id_el')
         ->select('elements.title as title', 'elements.number as number', 'nilai.nilai as nilai',
-        'nilai.image as image', 'nilai.id_el as link', 'nilai.nilai_auditor as auditor', 'nilai.id as id')
+        'nilai.image as image', 'nilai.id_el as link', 'nilai.nilai_auditor as auditor', 'nilai.id as id', 'nilai.id_answer as answer')
         ->where('nilai.id_user', '=', $id)
         ->get();
 
@@ -31,12 +31,13 @@ class ReportController extends Controller
         return view('report.index')->with('data', $data);
     }
 
-    public function show($id)
+    public function show($id, $id_assess)
     {
         $data = DB::table('answer')
             ->leftJoin('requirements', 'requirements.id', '=', 'answer.id_req')
             ->select('answer.jawaban as value', 'requirements.title as rule', 'answer.id_req as kode')
             ->where('answer.id_el', '=', $id)
+            ->where('answer.id_answer', '=', $id_assess)
             ->get();
 
         return view('report.user')->with('data', $data);
