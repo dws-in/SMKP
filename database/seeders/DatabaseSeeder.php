@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+use PharIo\Manifest\Requirement;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,6 +19,8 @@ class DatabaseSeeder extends Seeder
             PermissionRoleTableSeeder::class,
             UsersTableSeeder::class,
             RoleUserTableSeeder::class,
+            RequirementSeeder::class,
+            ElementSeeder::class
         ]);
     }
 }

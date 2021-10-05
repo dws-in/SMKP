@@ -36,7 +36,7 @@
                                         </td>
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('report.destroy', $row->id_answer) }}" method="POST">
-                                                <a class="btn btn-primary" href="{{ route('report.edit', $row->id) }}" role="button">Detail</a>
+                                                <a class="btn btn-primary" href="{{ route('report.edit', $row->id_user) }}" role="button">Detail</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Delete</button>

@@ -102,12 +102,14 @@
                                         <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
                                             {{$row->auditor}}
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            <a class="btn btn-primary" href="{{ route('report.show', $row->link) }}" role="button">Detail</a>
+                                        <td class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-900">
+                                            <a class="btn btn-primary" href="{{ route('report.show', $row->link.$row->answer) }}" role="button">Detail</a>
                                             <!-- Button trigger modal -->
+                                            @if(Auth::user()->role_id != 3)
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
                                                 Beri Nilai
                                             </button>
+                                            @endif
                                             <!-- Modal -->
                                             <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">

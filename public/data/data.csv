@@ -1,0 +1,467 @@
+id,number,title,element_id,n0,n1,n2,n3,n4
+1010100,a.,Tinjauan awal,10100,x,v,v,v,v
+1010200,b.,"Memenuhi 3 syarat (Risiko KP, benchmarking, efektivitas sumber daya)",10100,x,x,v - x,v,v
+1010300,c.,"Melibatkan melibatkan Departemen, pekerja atau serikat",10100,x,x,x - v,v,v
+1010400,d.,Evaluasi kebijakan,10100,x,x,x,x,v
+1020100,a.,Isi Kebijakan,10200,x,v,v,v,v
+1020200,b.,"Terdapat visi, misi, tujuan",10200,x,x,v,v,v
+1020300,c.,Komitmen melaksanakan KP,10200,x,x,v,v,v
+1020400,d.,Sebagian isi kebijakan diturunkan menjadi program kerja,10200,x,x,x,v,v
+1020500,e.,Seluruh isi kebujakan diturunkan menjadi program kerja,10200,x,x,x,x,v
+1030100,a.,"Tertulis, tertanggal, ditandatangani",10300,x,v,v,v,
+1030200,b.,Disahkan pimpinan tertinggi,10300,x,x,v,v,
+1030300,c.,Bersifat dinamis,10300,x,x,x,v,
+1040100,a.,Melakukan komunikasi kebijakan (dijelaskan dan disebarluaskan),10400,x,v,v,v,v
+1040200,b.,Bahasa mudah dipahami (Bahasa Indonesia),10400,x,x,v - x,v,v
+1040300,c.,Menggunakan beberapa media,10400,x,x,x - v,v,v
+1040400,d.,Dilakukan evaluasi ketersampaian informasi,10400,x,x,x,x,v
+1050100,a.,Peninjauan secara berkala,10500,x,v,v,v,v
+1050200,b.,Perubahan internal dan eksternal,10500,x,x,v,v,v
+1050300,c.,Sebagian hasil tinjauan sbg masukan penyusunan kebijakan baru,10500,x,x,x,v,v
+1050400,d.,Seluruh hasil tinjauan sbg masukan penyusunan kebijakan baru,10500,x,x,x,x,v
+2010100,a.,"Melakukan penelaahan awal (Proses bisnis, penyesuaian thdp peraturan, peninjauan kebijakan KP)",20100,x,v,v,v,v
+2010200,b.,"Menentukan tingkat ketercapaian KP (Tingkat dasar, reaktif, terencana, proaktif, resilient)",20100,x,x,v,v,v
+2010300,c.,Sesuai dengan kondisi,20100,x,x,x,v,v
+2010400,d.,Sinkron dengan program KP,20100,x,x,x,x,v
+2020101,a.,Melakukan komunkasi dan konsultasi,20201,x,v,v,v,v
+2020102,b.,Melakukan komunikasi dan konsultasi ke sebagian pemangku,20201,x,v,v,v,v
+2020103,c.,Melakukan komunikasi dan konsultasi ke seluruh pemangku,20201,x,x,v,v,v
+2020104,d.,Sebagian hasil menjadi bahan pertimbangan manajemen risiko,20201,x,x,x,v,v
+2020105,e.,Seluruh hasil menjadi bahan pertimbangan manajemen risiko,20201,x,x,x,x,v
+2020201,a.,"Melakukan penetapan konsteks (ruang lingkup, kegiatan, proses, metodologi penilaian risiko)",20202,x,v,v,v,
+2020202,b.,"Mencakup sebagian faktor Internal (proses rutin non rutin, perubahan organisasi, faktor pekerja,SPIP)",20202,x,v - x,v,v,
+2020203,c.,"Mencakup seluruh faktor Internal (proses rutin non rutin, perubahan organisasi, faktor pekerja,SPIP)",20202,x,v - x,x,v,
+2020204,d.,Mencakup sebagian Faktor Eksternal (PESTEL),20202,x,x - v,v,v,
+2020205,e.,Mencakup seluruh Faktor Eksternal (PESTEL),20202,x,x - v,x,v,
+2020301,a.,"Melakukan identifikasi bahaya (sumber2 bahaya, area terpapar bahaya, konsekuensi bahaya)",20203,x,v,v,,
+2020302,b.,Seluruh bahaya diidentifikasi,20203,x,x,v,,
+2020401,a.,"Melakukan penilaian dan pegendalian (ruang lingkup, sifat, waktu) : Kualitatif, Semi kualitatif, Kuantitatif",20204,x,v,v,v,
+2020402,b.,"Dikendalikan sesuai hirarki pengendalian (Eliminasi, subtitusi, isolasi, administrasi, prosedur, APD)",20204,x,x,v,v,
+2020403,c.,Implementasi pengendalian,20204,x,x,x,v,
+2020501,a.,Melakukan pemantaun dan peninjauan,20205,x,v,v,v,
+2020502,b.,"Dilakukan secara periodik atau terjadi kecelakaan, kejadian berbahaya, PAK",20205,x,x,v,v,
+2020503,c.,Pada proses dan kegiatan baru,20205,x,x,v,v,
+2020504,d.,Hasil memadai,20205,x,x,x,v,
+2030100,a.,Melakukan identifikasi dan kepatuhan peraturan,20300,x,v,v,v,
+2030200,b.,Sebagian evaluasi tealah mematuhi,20300,x,x,v,v,
+2030300,c.,Seluruh evaluasi tealah mematuhi,20300,x,x,x,v,
+2040100,a.,"Melakukan penetapan TSP (Peraturan, kebijakan, risiko,kinerja, kecelakaan, sumberdaya, waktu)",20400,x,v,v,v,v
+2040200,b.,Disahkan oleh Komite KP,20400,x,x,v,v,v
+2040300,c.,Selaras dengan kebijakan dan terukur,20400,x,x,x,v,v
+2040400,d.,Program mempertimbangkan seluruh ketentuan penyusunnya,20400,x,x,x,x,v
+2050100,a.,Penetapan RKAB aspek KP,20500,x,v,v,v,
+2050200,b.,Mempertimbangkan skala prioritas,20500,x,x,v,v,
+2050300,c.,Pemenuhan perundangan dan persyaratan lain,20500,x,x,v,v,
+2050400,d.,"Mendapatkan persetujuan : IUP dari pemerintah (menteri/gubernur), IUJP dari IUP",20500,x,x,x,v,
+3010100,a.,"Memiliki SO menggambarkan posisi KTT atau PTL, PJO, PO, PT, dan Pengelola KP, serta Kepala Tambang Bawah",30100,x,v,v,v,v
+3010200,b.,Sesuai ketentuan peraturan perundangan,30100,x,v,v,v,v
+3010300,c.,Integrasi dgn SO pemegang izin,30100,x,x,v,v,v
+3010400,d.,Memenuhi ketentuan yg dipersyaratkan,30100,x,x,x,v - x,v
+3010500,e.,Dikomunikasikan ke pekerja dan pihak terkait,30100,x,x,x,x - v,v
+3020101,a.,Pengesahan dari KaIT,30201,x,v,v,,
+3020102,b.,"Sertifikat KTT sesuai kompetensi (metode tambang, produksi, jumlah pekerja, jenis mineral)",30201,x,x,v,,
+3020201,a.,Pengesahan dari KaIT,30202,x,v,v,,
+3020202,b.,Sertifikat KTT sesuai kompetensi,30202,x,x,v,,
+3020301,a.,Pengesahan dari KTT,30203,x,v,v,,
+3020302,b.,KKK memiliki sertifikat kompetensi,30203,x,v,v,,
+3020303,c.,Seluruh KK mendapat surat dr KTT,30203,x,x,v,,
+3020304,d.,Seluruh KK mempunyai KKK,30203,x,x,v,,
+3030100,a.,Pengesahan dari KTT,30300,x,v,v,,
+3030200,b.,"PJO memiliki persyaratan administrasi (jabatan tertinggi di site, uji kemahiran bhs indonesia tingkat madya) dan teknis (memahasi aspek pertambangan, sertifikat)",30300,x,x,v,,
+3030300,c.,Seluruh PJP memiliki PJO,30300,x,x,v,,
+3040100,a.,KTT Membentuk dan menetapkan K3 dan KO,30400,x,v,v,v,v
+3040200,b.,"Dibentuk berdasarkan jumlah pekerja, sifat dan luas pekerjaan",30400,x,x,v,v,v
+3040300,c.,Berada didalam struktur organisasi KTT atau dibawah PJO untuk IUJP,30400,x,x,x,v,v
+3040400,d.,Tugas tanggung jawab mencakup seluruh ruang lingkup sesuai peraturan perundangan,30400,x,x,x,x,v
+3050100,a.,KTT mengangkat sebagian PO dengan surat penunjukkan,30500,x,v,v,v,v
+3050200,b.,KTT mengangkat sebagian PT dengan surat pengesahan,30500,x,v,v,v,v
+3050300,c.,KTT mengangkat seluruh PO dengan surat penunjukkan,30500,x,x,v,v,v
+3050400,d.,KTT mengangkat seluruh PT dengan surat pengesahan,30500,x,x,v,v,v
+3050500,e.,Sebagian PO memiliki kartu pengawasa dari KaIT,30500,x,x,v,v,v
+3050600,f.,Seluruh PO memiliki kartu pengawasa dari KaIT,30500,x,x,x,v,v
+3050700,g.,PO dan PT menjalankan tugas dan tanggung jawab,30500,x,x,x,x,v
+3060100,a.,"KTT menunjuk TTKP berkompeten (juru ledak, ukur, las, bor, derek, rawat, pemadam kebakaran, tim TGD, dll)",30600,x,v,v,v,v
+3060200,b.,Sebagian TTKP memiliki surat penunjukan KTT,30600,x,v,v,v,v
+3060300,c.,Sebagian TTKP memiliki sertifikasi kompetensi yg ditetapkan KTT/pemerintah,30600,x,v,v,v,v
+3060400,d.,Membuat daftar TTKP,30600,x,x,v,v,v
+3060500,e.,Seluruh TTKP memiliki surat penunjukan KTT,30600,x,x,v,v,v
+3060600,f.,Seluruh TTKP memiliki sertifikasi kompetensi yg ditetapkan KTT/pemerintah,30600,x,x,x,v,v
+3060700,g.,Sebagian TTKP menjalankan tugas dan tanggungjawab sesuai perundangan,30600,x,x,x,v,v
+3060800,h.,Seluruh TTKP menjalankan tugas dan tanggungjawab sesuai perundangan,30600,x,x,x,x,v
+3070100,a.,"Pemegang izin membentuk dan menetapkan KKP (Ketua dijabat KTT, wakil ketua, sekretaris dijabat pengelola KP tertinggi, anggota)",30700,x,v,v,v,v
+3070200,b.,"Anggota dari sebagian bagian K3, KO, operasional pertambangan, wakil pekerja",30700,x,v,v,v,v
+3070300,c.,Sebagian anggota mendapatkan pelatihan,30700,x,v,v,v,v
+3070400,d.,Disahkan KTT atau PJO,30700,x,x,v,v,v
+3070500,e.,"Anggota dari seluruh bagian K3, KO, operasional pertambangan, wakil pekerja",30700,x,x,x,v,v
+3070600,f.,Seluruh anggota mendapatkan pelatihan,30700,x,x,x,x,v
+3070700,g.,"Menjalankan tugas dan tanggungjawab (menetapkan TSP, memastikan terselenggaranya audit, tinjauna menajemen, membahas program pencegahan kecelakaan, rapat minimal 1 bulan sekali, dll)",30700,x,x,x,x,v
+3080100,a.,KTT telah menunjuk TTD,30800,x,v,v,v,v
+3080200,b.,Mencakup sebagian area kerja,30800,x,v,v,v,v
+3080300,c.,Dilaporkan ke KaIT,30800,x,x,v,v,v
+3080400,d.,Mencakup seluruh area kerja,30800,x,x,x,v,v
+3080500,e.,Selalu siap siaga,30800,x,x,x,v,v
+3080600,f.,Memiliki ketrampilan dan kompetensi,30800,x,x,x,v,v
+3080700,g.,Mendapatkan pendidikan dan pelatihan,30800,x,x,x,x,v
+3090100,a.,Pemegang izin mengatur seleksi dan penempatan personil secara tertulis,30900,x,v,v,v,v
+3090200,b.,Setiap personel memiliki tugas dan tanggungjawab mencakup aspek KP,30900,x,x,v,v,v
+3090300,c.,Memasukkan aspek KP,30900,x,x,x,v,v
+3090400,d.,Mempertimbangkan identifikasi kompetensi kerja,30900,x,x,x,v,v
+3090500,e.,Setiap personel memahami dan menjalankan tugas dan tanggungjawab mencakup aspek KP,30900,x,x,x,x,v
+3100101,a.,"Pemegang izin menyelenggarakan dan melaksanan diklat kepada pekerja, PO, PT",31001,x,v,v,v,v
+3100102,b.,Pengumpulan data dan informasi yg mencakup identifikasi pekerjaan dilakukan secara memadai,31001,x,x,v,v,v
+3100103,c.,Berdasarkan TNA,31001,x,x,v,v,v
+3100104,d.,Monitoring dan evaluasi diklat dilakukan secara memadai,31001,x,x,v,v,v
+3100105,e.,Hasil monitoring dan evaluasi ditindaklanjuti,31001,x,x,x,v,v
+3100106,f.,Program diklat mencapai target dan sasaran yg diharapkan,31001,x,x,x,x,v
+3100201,a.,Pemegang izin mengidentifikasi standar kompetensi KP,31002,x,v,v,v,v
+3100202,b.,"Sebagian pekerja, PO, PT memiliki kompetensi sesuai peraturan",31002,x,v,v,v,v
+3100203,c.,Hasil identifikasi kompetensi digunakan dasar penentuan program diklat,31002,x,x,v,v,v
+3100204,d.,"Seluruh pekerja, PO, PT memiliki kompetensi sesuai peraturan",31002,x,x,x,v,v
+3100205,e.,Hasil identifikasi kompetensi digunakan promosi dan penilaian kinerja,31002,x,x,x,v,v
+3100206,f.,Standar kompetensi dikembangkan sesuai kebutuhan,31002,x,x,x,x,v
+3110100,a.,Pemegang izin menyusun mekanisme untuk mengkomunikasikan hal2 thdp aspek KP,31100,x,v,v,v,v
+3110200,b.,"Pemegang izin menyusun mekanisme apabila ada kecelakaan, PAK, PTK, dll",31100,x,v,v,v,v
+3110300,c.,Pemegang izin menerapkan mekanisme untuk mengkomunikasikan hal2 thdp aspek KP,31100,x,x,v,v,v
+3110400,d.,Pemegang izin mengevaluasi penyampaian informasi kepada pihak terkait,31100,x,x,x,v,v
+3110500,e.,Informasi yg disampaikan ditindaklanjuti dan dpt dikontrol KTT,31100,x,x,x,x,v
+3120101,a.,Pemegang izin memiliki buku tambang,31201,x,v,v,v,v
+3120102,b.,Dapat dibaca dan dipelajari pekerja,31201,x,x,v,v,v
+3120103,c.,"KTT melakukan sebagian larangan, perintah, petunjuk IT",31201,x,x,v,v,v
+3120104,d.,KTT mencatat sebagian hal2 yg diwajibkan untuk didaftarkan di buku tambang,31201,x,x,v,v,v
+3120105,e.,"KTT melakukan seluruh larangan, perintah, petunjuk IT",31201,x,x,x,v,v
+3120106,f.,KTT mencatat seluruh hal2 yg diwajibkan untuk didaftarkan di buku tambang,31201,x,x,x,v,v
+3120107,g.,KTT memastikan pekerja memahami isi buku tambang,31201,x,x,x,x,v
+3120201,a.,Pemegang izin memiliki buku daftar kecelakaan tambang,31202,x,v,v,v,
+3120202,b.,"KTT mendaftarkan sebagian kecelakaan (cidera ringan, berat, mati) di buku daftar",31202,x,x,v,v,
+3120203,c.,"KTT mendaftarkan seluruh kecelakaan (cidera ringan, berat, mati) di buku daftar",31202,x,x,x,v,
+3120301,a.,Pemegang izin melaporkan aspek KP,31203,x,v,v,v,
+3120302,b.,Menyampaikan seluruh laporan tertulis aspek KP kepada KaIT,31203,x,x,v,v,
+3120303,c.,Sesuai format,31203,x,x,v,v,
+3120304,d.,"Memenuhi waktu (bulanan, triwulan, tahunan, khusus)",31203,x,x,x,v,
+3120401,a.,"KTT mendokumentasi sebagian kejadian berbahaya, PAK PTK",31204,x,v,v,v,
+3120402,b.,Menggunakan format khusus,31204,x,x,v,v,
+3120403,c.,"KTT mendokumentasi seluruh kejadian berbahaya, PAK PTK",31204,x,x,x,v,
+3120501,a.,"Pemegang izin mendokumentasikan sebagian kelayakan SPIP, sertifikat, laporan kompetensi",31205,x,v,v,v,
+3120502,b.,"Pemegang izin mendokumentasikan seluruh kelayakan SPIP, sertifikat, laporan kompetensi",31205,x,x,v,v,
+3120503,c.,Melakukan pemantauan dan pelaporan pemenuhan kompetensi sesuai peraturan,31205,x,x,x,v,
+3130100,a.,"Pemegang izin menyusun, menetapkan penerapan SMKP",31300,x,v,v,v,v
+3130200,b.,"Pemegang izin menerapkan, mengevaluasi, mendokumentasi penerapan SMKP",31300,x,v,v,v,v
+3130300,c.,Melibatkan sebagian departemen dari pekerja,31300,x,x,v,v,v
+3130400,d.,Melibatkan seluruh departemen dari pekerja,31300,x,x,x,v,v
+3130500,e.,"Proses partisipasi, konsultasi, motivasi menjadi masukan dlm peningkatan KP",31300,x,x,x,x,v
+4010101,a.,Terdapat prosedur kerja,40101,x,v,v,v,v
+4010102,b.,Prosedur disahkan KKT dan diberi nomor,40101,x,v,v,v,v
+4010103,c.,Prosedur terdapat di setiap pekerjaan,40101,x,x,v,v,v
+4010104,d.,Prosedur mempertimbangkan BBS,40101,x,x,v,v,v
+4010105,e.,Prosedur dikomunikasikan ke pihak terkait,40101,x,x,v,v,v
+4010106,f.,Prosedur dievaluasi berkala,40101,x,x,x,v,v
+4010107,g.,Konsisten diterapkan seluruh pekerja,40101,x,x,x,x,v
+4010201,a.,Menyusun dan menetapkan izin kerja khusus,40102,x,v,v,v,
+4010202,b.,Mempertimbangkan BBS,40102,x,x,v,v,
+4010203,c.,Dievaluasi berkala,40102,x,x,x,v,
+4010204,d.,Konsisten diterapkan seluruh pekerja,40102,x,x,x,v,
+4010301,a.,Menilai kebutuhan APD sesuai jenis pekerjaan,40103,x,v,v,v,v
+4010302,b.,Melaksanakan pelatihan APD,40103,x,x,v,v,v
+4010303,c.,Evaluasi kepatuhan APD,40103,x,x,x,v,v
+4010304,d.,Pekerja patuh penggunaan APD,40103,x,x,x,x,v
+4020101,a.,Menetapkan prosedur,40201,x,v,v,v,v
+4020102,b.,Antisipasi dan pengenalan bahaya dan karakteristik,40201,x,v,v,v,v
+4020103,c.,Evaluasi secara berkala yg terdokumentasikan,40201,x,x,v,v,v
+4020104,d.,Evaluasi dilakukan tenaga berkompeten,40201,x,x,v,v,v
+4020105,e.,Evaluasi menggunakan alat terkalibrasi,40201,x,x,v,v,v
+4020106,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40201,x,x,x,v,v
+4020107,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40201,x,x,x,x,v
+4020201,a.,Menetapkan prosedur,40202,x,v,v,v,v
+4020202,b.,Antisipasi dan pengenalan bahaya dan karakteristik,40202,x,v,v,v,v
+4020203,c.,Evaluasi secara berkala yg terdokumentasikan,40202,x,x,v,v,v
+4020204,d.,Evaluasi dilakukan tenaga berkompeten,40202,x,x,v,v,v
+4020205,e.,Evaluasi menggunakan alat terkalibrasi,40202,x,x,v,v,v
+4020206,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40202,x,x,x,v,v
+4020207,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40202,x,x,x,x,v
+4020301,a.,Menetapkan prosedur,40203,x,v,v,v,v
+4020302,b.,"Antisipasi dan pengenalan bahaya dan getaran tubuh. Tangan, lengan",40203,x,v,v,v,v
+4020303,c.,Evaluasi secara berkala yg terdokumentasikan,40203,x,x,v,v,v
+4020304,d.,Evaluasi dilakukan tenaga berkompeten,40203,x,x,v,v,v
+4020305,e.,Evaluasi menggunakan alat terkalibrasi,40203,x,x,v,v,v
+4020306,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40203,x,x,x,v,v
+4020307,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40203,x,x,x,x,v
+4020401,a.,Menetapkan prosedur,40204,x,v,v,v,v
+4020402,b.,Antisipasi dan pengenalan bahaya dan karakteristik,40204,x,v,v,v,v
+4020403,c.,Evaluasi secara berkala yg terdokumentasikan,40204,x,x,v,v,v
+4020404,d.,Evaluasi dilakukan tenaga berkompeten,40204,x,x,v,v,v
+4020405,e.,Evaluasi menggunakan alat terkalibrasi,40204,x,x,v,v,v
+4020406,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40204,x,x,x,v,v
+4020407,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40204,x,x,x,x,v
+4020501,a.,Menetapkan prosedur,40205,x,v,v,v,v
+4020502,b.,Antisipasi dan pengenalan bahaya dan karakteristik,40205,x,v,v,v,v
+4020503,c.,Evaluasi secara berkala yg terdokumentasikan,40205,x,x,v,v,v
+4020504,d.,Evaluasi dilakukan tenaga berkompeten,40205,x,x,v,v,v
+4020505,e.,Evaluasi menggunakan alat terkalibrasi,40205,x,x,v,v,v
+4020506,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40205,x,x,x,v,v
+4020507,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40205,x,x,x,x,v
+4020601,a.,Menetapkan prosedur,40206,x,v,v,v,v
+4020602,b.,Antisipasi dan pengenalan bahaya dan indikator index suhu basah dan bola,40206,x,v,v,v,v
+4020603,c.,Evaluasi secara berkala yg terdokumentasikan,40206,x,x,v,v,v
+4020604,d.,Evaluasi dilakukan tenaga berkompeten,40206,x,x,v,v,v
+4020605,e.,Evaluasi menggunakan alat terkalibrasi,40206,x,x,v,v,v
+4020606,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40206,x,x,x,v,v
+4020607,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40206,x,x,x,x,v
+4020701,a.,Menetapkan prosedur,40207,x,v,v,v,v
+4020702,b.,"Antisipasi dan pengenalan bahaya terkait radiasi alamiah, buatan, pengion dan non pengion",40207,x,v,v,v,v
+4020703,c.,Evaluasi secara berkala yg terdokumentasikan,40207,x,x,v,v,v
+4020704,d.,Evaluasi dilakukan tenaga berkompeten,40207,x,x,v,v,v
+4020705,e.,Evaluasi menggunakan alat terkalibrasi,40207,x,x,v,v,v
+4020706,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40207,x,x,x,v,v
+4020707,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40207,x,x,x,x,v
+4020801,a.,Menetapkan prosedur,40208,x,v,v,v,v
+4020802,b.,Antisipasi dan pengenalan bahaya,40208,x,v,v,v,v
+4020803,c.,Evaluasi secara berkala yg terdokumentasikan,40208,x,x,v,v,v
+4020804,d.,Evaluasi dilakukan tenaga berkompeten,40208,x,x,v,v,v
+4020805,e.,Evaluasi menggunakan alat terkalibrasi,40208,x,x,v,v,v
+4020806,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40208,x,x,x,v,v
+4020807,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40208,x,x,x,x,v
+4020901,a.,Menetapkan prosedur,40209,x,v,v,v,v
+4020902,b.,Antisipasi dan pengenalan bahaya berasal mirko dan makro organisme,40209,x,v,v,v,v
+4020903,c.,Evaluasi secara berkala yg terdokumentasikan,40209,x,x,v,v,v
+4020904,d.,Evaluasi dilakukan tenaga berkompeten,40209,x,x,v,v,v
+4020905,e.,Evaluasi menggunakan alat terkalibrasi,40209,x,x,v,v,v
+4020906,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40209,x,x,x,v,v
+4020907,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40209,x,x,x,x,v
+4021001,a.,Menetapkan prosedur,40210,x,v,v,v,v
+4021002,b.,Antisipasi dan pengenalan bahaya,40210,x,v,v,v,v
+4021003,c.,Evaluasi secara berkala yg terdokumentasikan,40210,x,x,v,v,v
+4021004,d.,Evaluasi dilakukan tenaga berkompeten,40210,x,x,v,v,v
+4021005,e.,Evaluasi menggunakan alat terkalibrasi,40210,x,x,v,v,v
+4021006,f.,Sebagian hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40210,x,x,x,v,v
+4021007,g.,Seluruh hasil evaluasi ditindaklanjuti sesuai hirarki pengendalian,40210,x,x,x,x,v
+4030101,a.,Pemegang izin menetapkan prosedur pemeriksaan kesehatan,40301,x,v,v,v,v
+4030102,b.,"Pemegang izin melaksanakan sebagian pemeriksaan kesehatan (awal, berkala, khusus, akhir)",40301,x,v,v,v,v
+4030103,c.,"Pemegang izin melaksanakan seluruh pemeriksaan kesehatan (awal, berkala, khusus, akhir)",40301,x,x,v,v,v
+4030104,d.,Pedoman pemeriksaan disusun oleh dokter psh dan disahkan KTT,40301,x,x,v,v,v
+4030105,e.,Menindaklanjuti seluruh hasil pemeriksaan kesehatan,40301,x,x,x,v,v
+4030106,f.,Evaluasi catatan kesehatan pekerja,40301,x,x,x,x,v
+4030201,a.,Pemegang izin melakukan pelayanan kesehatan,40302,x,v,v,,
+4030202,b.,Pemegang izin mentapkan prosedur pelayanan kesehatan,40302,x,v,v,,
+4030203,c.,"Pemegang izin menyediakan tenaga kesehatan (dokter psh, perawat, dll)",40302,x,v,v,,
+4030204,d.,"Pemegang izin menyediakan sarana dan prasarana (ruangan, peralatan medis, alat evakuasi, dll)",40302,x,v,v,,
+4030205,e.,Penyediaan tenaga kesehatan sesuai peraturan,40302,x,x,v,,
+4030206,f.,Penyediaan sarana prasarana sesuai peraturan,40302,x,x,v,,
+4030207,g.,"Kualifikasi pelayanan kesehatan kerja sudah sesuai (Kegawatdaruratan, Pratama, Utama)",40302,x,x,v,,
+4030301,a.,Pemegang izin melaksanakan pengelolaan P3K,40303,x,v,v,,
+4030302,b.,Pemegang izin mentapkan prosedur P3K,40303,x,v,v,,
+4030303,c.,"Pemegang izin menyediakan petugas berkompeten, fasilitas, peralatan",40303,x,v,v,,
+4030304,d.,"Penyediaan petugas berkompeten, fasilitas, peralatan sesuai peraturan",40303,x,x,v,,
+4030305,e.,Pemegang izin mengadakan pelatihan untuk P3K,40303,x,v,v,,
+4030306,f.,Penyediaan pelatihan P3K sesuai peraturan,40303,x,x,v,,
+4030307,g.,Kotak P3K dikelola sesuai peraturan,40303,x,x,v,,
+4030401,a.,Pemegang izin melakukan pengelolaan kelelahan kerja,40304,x,v,v,v,
+4030402,b.,Pemegang izin menetapkan prosedur pengelolaan kelelahan kerja,40304,x,v,v,v,
+4030403,c.,"Pemegang izin melakukan identifikasi, evaluasi dan pengendalian faktor yg menimbulkan kelelahan",40304,x,x,v,v,
+4030404,d.,Pemegang izin memberikan diklat/sosialisasi tentang pengelolaan kelelahan,40304,x,x,x,v,
+4030501,a.,Pemegang izin melakukan pengelolaan pekerja di tempat yg memiliki risiko kesehatan tinggi,40305,x,v,v,,
+4030502,b.,Pemengan izin menetapkan prosedur,40305,x,v,v,,
+4030503,c.,Risiko dikendalikan secara memadai,40305,x,x,v,,
+4030504,d.,Pekerja memahami cara kerja aman dan konsekuensi,40305,x,x,v,,
+4030601,a.,Pemegang izin melakukan pengelolaan rekaman kesehatan kerja,40306,x,v,v,v,v
+4030602,b.,Pemegang izin menetapkan prosedur,40306,x,v,v,v,v
+4030603,c.,Pemegang izin memelihara rekaman kesehatan kerja,40306,x,x,v,v,v
+4030604,d.,Pemegang izin menganalisa dan mengevaluasi rekaman kesehatan kerja,40306,x,x,x,v,v
+4030605,e.,Pemegang izin membuatn statistik kinerja kesehatan kerja (leading dan lagging indicator),40306,x,x,x,x,v
+4030701,a.,Pemegang izin melakukan pengelolaan higiene dan sanitasi,40307,x,v,v,,
+4030702,b.,Pemegang izin menetapkan prosedur,40307,x,v,v,,
+4030703,c.,Pemegang izin menyediakan fasilitas menunjang tercapainya higienitas yg memadai,40307,x,x,v,,
+4030704,d.,"Pemegang izin melakukan pengelolaan sanitasi minimal : tempat sampah, toilet, wastafel, kebrsihan lantai, ruang ganti, kamar mandi yg memadai",40307,x,x,v,,
+4030801,a.,Pemegang izin melakukan pengelolaan ergonomi,40308,x,v,v,v,
+4030802,b.,Pemegang izin menetapkan prosedur,40308,x,v,v,v,
+4030803,c.,Pemegang izin melakukan penilaian risiko ergonomi,40308,x,x,v,v,
+4030804,d.,Hasil penilaian risiko memadai,40308,x,x,x,v,
+4030805,e.,Pemegang izin menyediakan sebagian prosedur kerja SPIP,40308,x,x,v,v,
+4030806,f.,Pemegang izin menyediakan seluruh prosedur kerja SPIP,40308,x,x,x,v,
+4030901,a.,"Pemegang izin melakukan pengelolaan makanan, minuman, gizi pekerja",40309,x,v,v,,
+4030100,b.,Pemegang izin menetapkan prosedur,40300,x,v,v,,
+4030200,c.,Penyediaan makanan minuman memenuhi syarat,40300,x,x,v,,
+4030300,a,Pemegang izin menetapkan prosedur,40300,x,v,v,v,v
+4030400,b.,Pemegang izin melakukan diagnosis PAK oleh dokter psh,40300,x,x,v,v,v
+4030500,c.,KTT melaporkan kepada KaIT,40300,x,x,v,v,v
+4030600,d.,Formulir sudah tepat,40300,x,x,x,v,v
+4030700,e.,Batas waktu tepat,40300,x,x,x,x,v
+4030800,f.,Pemegang izin melakukan upaya kuratif dan rehabilitasi thpd PAK,40300,x,x,x,x,v
+4040101,a.,Pemegang izin menetapkan prosedur,40401,x,v,v,v,v
+4040102,b.,Pemegang izin membuat daftar SPIP,40401,x,v,v,v,v
+4040103,c.,"Pemegang izin membuat program, jadwal, prosedur pemeliharaan dan perawatan",40401,x,x,v,v,v
+4040104,d.,"Pelaksanaan program, jadwal, prosedur sesuai dengan jadwal",40401,x,x,x,v,v
+4040105,e.,Pemeliharaan dan perawatan dilakukan oleh tenaga berkompeten,40401,x,x,x,x,v
+4040201,a.,Pemegang izin menetapkan prosedur,40402,x,v,v,v,v
+4040202,b.,Pemegang izin membuat daftar instalasi pertambangan,40402,x,v,v,v,v
+4040203,c.,"Pemegang izin membuat program, jadwal, dan prosedur pengamanan, pemasangan, dan pemeliharaan pengamanan instalasi",40402,x,x,v,v,v
+4040204,d.,"Pelaksanaan program, jadwal, prosedur sesuai dengan jadwal",40402,x,x,x,v,v
+4040205,e.,Pemeliharaan dan perawatan dilakukan oleh tenaga berkompeten,40402,x,x,x,x,v
+4040301,a.,Pemegang izin menetapkan prosedur,40403,x,v,v,v,v
+4040302,b.,Pemegang izin membuat daftar SPIP,40403,x,v,v,v,v
+4040303,c.,"Pemegang izin membuat program, jadwal, dan prosedur pengujian kelayakan sarana, prasarana, instalasi, dan peralatan Pertambangan",40403,x,x,v,v,v
+4040304,d.,"Pelaksanaan program, jadwal, prosedur sesuai dengan jadwal",40403,x,x,x,v,v
+4040305,e.,Pemeliharaan dan perawatan dilakukan oleh tenaga berkompeten,40403,x,x,x,x,v
+4040401,a.,"Pemegang izin menunjuk tenaga teknik berkompeten untuk menyusun prosedur, program, jadwal dan pengujian kelayakan SPIP",40404,x,v,v,v,v
+4040402,b.,Jumlah tenaga teknik berkompeten memadai,40404,x,x,v,v,v
+4040403,c.,Bukti kerja Tenaga Teknis Pertambangan yang Berkompeten telah memadai pengelolaan KO,40404,x,x,x,v,v
+4040404,d.,Pelaksanaan program tenaga teknik sesuai dengan jadwal,40404,x,x,x,x,v
+4040501,a.,Pemegang izin menetapkan prosedur,40405,x,v,v,v,v
+4040502,b.,Pemegang izin membuat kajian teknis saat awal kegiatan,40405,x,v,v,v,v
+4040503,c.,Pemegang izin membuat kajian teknis bila terjadi perubahan thdp proses SPIP,40405,x,x,v,v,v
+4040504,d.,Hasil kajian teknis memadai dan disampaikan ke KaIT,40405,x,x,x,v,v
+4040505,e.,Hasil kajian memadai,40405,x,x,x,x,v
+4050101,a.,Pemegang izin memiliki izin yg disahkan KaIT,40501,x,v,v,,
+4050102,b.,"Sebagian fasilitas keselamatan & keamanan memadai (security, kepala gudang, pagar, CCTV, hidrant, APAR, penyalur petir, alarm, dll) memadai dan dilakukan pemeliharaan",40501,x,v,v,,
+4050103,c.,"Seluruh fasilitas keselamatan & keamanan memadai (security, kepala gudang, pagar, CCTV, hidrant, APAR, penyalur petir, alarm, dll) memadai dan dilakukan pemeliharaan",40501,x,x,v,,
+4050201,a.,Pemegang izin memiliki prosedur peyimpanan handak,40502,x,v,v,v,v
+4050202,b.,"Prosedur dijalankan dengan baik (lampiran peta, dll)",40502,x,x,v,v,v
+4050203,c.,Pengelolaan administrasi handak (buku catatan keluar masuk handak),40502,x,x,v,v,v
+4050204,d.,Penunjukkan petugas administrasi dan petugas gudang,40502,x,x,v,v,v
+4050205,e.,"Petugas administrasi dan petugas gudang memiliki kartu pekerja peledakan (KPP pratama, madya)",40502,x,x,x,v,v
+4050206,f.,Pemeriksaan handak (stock opname mingguan),40502,x,x,v,v,v
+4050207,g.,Pelaporan secara berkala kepada KaIT (triwulan),40502,x,x,x,x,v
+4050301,a.,Pemegang izin mempunyai prosedur pengangkutan bahan peledak,40503,x,v,v,v,v
+4050302,b.,Melakukan penetapan pengamanan (prosedur pengamanan),40503,x,x,v,v,v
+4050303,c.,"Kelayakan peralatan dan kendaraan (hasil commisioning, pemeriksaan harian, kelayakan unit berbentuk
+tangki, forklift)",40503,x,x,v,v,v
+4050304,d.,Hasil pengelolaan pengankutan bahan peledak memadai,40503,x,x,x,v,v
+4050305,e.,"Kompetensi pekerja (KPP Pertama = satpam, Madya = personel peledakan)",40503,x,x,x,x,v
+4050401,a.,"Pemegang izin memiliki prosedur (tahap persiapan, peledakan, pasca, gagal ledak)",40504,x,v,v,v,v
+4050402,b.,"Penyediaan peralatan (prosedur, tempat penyimpaan, kalibrasi)",40504,x,x,v,v,v
+4050403,c.,"Mendokumentasi pemeliharaan peralatan (hasil pemeriksaan, kalibrasi, dll)",40504,x,x,x,v,v
+4050404,d.,"Pekerja memiliki kartu izin 
+KIM : menguji pola peledakan, menetapkan daerah bahaya peledakan, menyuruh orang menyingkir dan berlindung, meledakkan lubang ledak, menangani kegagalan peledakan, menyambung sirkit peledakan ke sirkit detonator, mengendalikan akibat peledakan, memastikan hasil peledakan
+KPP Madya : membuat primer, mengisi bahan peledak ke lubang ledak, merangkai dan menyambung bahan peledak
+KPP Pertama : menyumbat lubang ledak",40504,x,x,x,x,v
+4060101,a.,Pemegang izin menetapkan prosedur mempertimbangkan aspek KP pada tahap perancangan SPIP,40601,x,v,v,v,
+4060102,b.,Petugas memiliki kompetensi (verifikasi dan persetujuan yg ditunjuk oleh KTT),40601,x,x,v,v,
+4060103,c.,Prosedur dilaksanakan dengan baik,40601,x,x,x,v,
+4060201,a.,Pemegang izin menetapkan prosedur terkait perubahan dan modifikasi,40602,x,v,v,v,
+4060202,b.,Petugas memiliki kompetensi (identifikasi dan tinjauan ulang),40602,x,x,v,v,
+4060203,c.,Prosedur dilaksanakan dengan baik,40602,x,x,x,v,
+4070100,a.,"Pemegang izin menetapkan prosedur pembelian yang terdokumentasi sesuai dengan spesifikasi teknik, persyaratan KP dan peraturan",40700,x,v,v,v,v
+4070200,b.,"Penetapan prosedur spesikasi pembelian, seleksi pembelian, verifikasi kesesuain",40700,x,x,v,v,v
+4070300,c.,Terlaksana implementasi prosedur,40700,x,x,x,v,v
+4070400,d.,Penjelasan dan sosialisasi ke semua pihak terkait IBPR,40700,x,x,x,x,v
+4080101,a.,Pemegang izin menetapkan prosedur persyaratan dan seleksi penetapan IUJP tertuang persyaratan KP,40801,x,v,v,,
+4080102,b.,Kontrak kerja memuat komitmen perusahaan jasa mematuhi persyaratan Keselamatan Pertambangan pemegang izin,40801,x,x,v,,
+4080201,a.,"Pemegang izin menetapkan prosedur tanggung jawab, pemantauan dan pelaporan perusahaan jasa pertambangan",40802,x,v,v,,
+4080202,b.,Perusahaan jasa pertambangan memiliki pekerja yg kompeten,40802,x,x,v,,
+4080203,c.,Perusahaan jasa pertambangan menggunakan SPIP dan memiliki bukti kelayakan,40802,x,x,v,,
+4080204,d.,Perusahaan jasa pertambangan melaporkan kepada KTT tentang program KP secara berkala,40802,x,x,v,,
+4080301,a.,"Pemegang izin menetapkan prosedur evaluasi perusahaan jasa pertambangan (kegiatan evaluasi, penilaian hasil evaluasi, laporan dan tindak lanjut evaluasi)",40803,x,v,v,,
+4080302,b.,Melakukan evaluasi prosedur dan memberikan umpan balik,40803,x,x,v,,
+4090100,a.,Pemegang izin menetapkan prosedur penggelolaan keadaan darurat,40900,x,v,v,v,
+4090200,b.,"Mencakup identifikasi dan penilaian potensi keadaan darurat, pencegahan keadaan darurat, kesiapsiagaan keadaan darurat, respon keadaan darurat, dan pemulihan keadaan darurat",40900,x,x,v,v,
+4090300,c.,Prosedur tersebut telah dilaksanakan dengan baik,40900,x,x,x,v,
+4100100,a.,Pemegang izin menetapkan prosedur penyediaan dan peyimpanan P3K,41000,x,v,v,v,
+4100200,b.,"Mencakup petugas P3K, kotak P3K, isi kotak P3K, dan pencatatan penggunaan isi kotak P3K",41000,x,x,v,v,
+4100300,c.,Prosedur tersebut telah dilaksanakan dengan baik,41000,x,x,x,v,
+4110100,a.,Pemegang izin mengkomunikasikan keselamatan di luar pekerjaan kepada semua Pekerja dan keluarganya,41100,x,v,v,v,
+4110200,b.,Materi promosi dan kegiatan didokumentasikan,41100,x,x,v,v,
+4110300,c.,Dilakukan di seluruh departemen dari pekerja,41100,x,x,x,v,
+5010101,a.,Pemegang izin memiliki prosedur pemantauan dan pengukuran pencapaian TSP KP,50101,x,v,v,v,v
+5010102,b.,"Prosedur menjelaskan metode, frekuensi, ruang lingkup, dan peralatan yang sesuai",50101,x,x,v,v,v
+5010103,c.,Dilakukan sesuai prosedur,50101,x,x,x,v,v
+5010104,d.,"Hasil pemantauan seluruhnya didokumentasi, dievaluasi dan dibuat perbaikan tindak lanjutnya",50101,x,x,x,x,v
+5010201,a.,"Pemengang izin memiliki prosedur pemantauan, pengukuran kinerja, evaluasi, dan tindak lanjut pengelolaan lingkungan kerja yang menjelaskan metode, frekuensi, ruang lingkup, dan peralatan yang sesuai (debu, kebisingan, getaran, cahaya, dll)",50102,x,v,v,v,v
+5010202,b.,Dilakukan sesuai prosedur,50102,x,x,v,v,v
+5010203,c.,Dilakukan oleh petugas higiene industri,50102,x,x,v,v,v
+5010204,d.,Menetapkan rencana tindak lanjut dan perbaikan berdasarkan hasil evaluasi,50102,x,x,x,v,v
+5010205,e.,Sebagian tindak lanjut telah dilaksanakan,50102,x,x,x,v,v
+5010206,f.,Seluruh tindak lanjut telah dilaksanakan,50102,x,x,x,x,v
+5010301,a.,"Pemegang izin prosedur pemantauan, pengukuran kinerja, evaluasi, dan tindak lanjut pengelolaan kesehatan kerja Pertambangan yang menjelaskan metode, frekuensi, ruang lingkup, dan peralatan yang sesuai ( pemeriksaan kesehatan, pelayanan kesehatan, P3K, fatig, higiene, sanitasi, ergonomi, PAK, dll)",50103,x,v,v,v,v
+5010302,b.,"Pemantauan, pengukuran, dan evaluasi pengelolaan kesehatan kerja Pertambangan telah
+dilaksanakan sesuai prosedur",50103,x,x,v,v,v
+5010303,c.,Pemegang izin menetapkan rencana tindak lanjut dan perbaikan berdasarkan hasil evaluasi,50103,x,x,x,v,v
+5010304,d.,Sebagian tindak lanjut dan perbaikan berdasarkan hasil evaluasi telah dilaksanakan,50103,x,x,x,v,v
+5010305,e.,Seluruh tindak lanjut dan perbaikan berdasarkan hasil evaluasi telah dilaksanakan,50103,x,x,x,x,v
+5010401,a.,"Pemegang izin memiliki prosedur pemantauan, pengukuran kinerja, evaluasi, dan tindak lanjut pengelolaan Keselamatan Operasi Pertambangan yang menjelaskan metode, frekuensi, ruang lingkup, dan peralatan yang sesuai (SPIP, kompetensi tenaga teknik, evaluasi laporan hasil kajian teknis)",50104,x,v,v,v,v
+5010402,b.,"Pemantauan, pengukuran, dan evaluasi pengelolaan Keselamatan Operasi Pertambangan telah dilaksanakan sesuai prosedur",50104,x,x,v,v,v
+5010403,c.,Pemantauan dan pengukuran dilaksanakan oleh Tenaga Teknis Pertambangan yang Berkompeten di bidang Keselamatan Operasi,50104,x,x,v,v,v
+5010404,d.,Pemegang izin menetapkan rencana tindak lanjut dan perbaikan berdasarkan hasil evaluasi,50104,x,x,x,v,v
+5010405,e.,Sebagian tindak lanjut dan perbaikan berdasarkan hasil evaluasi telah dilaksanakan,50104,x,x,x,v,v
+5010406,f.,Seluruh tindak lanjut dan perbaikan berdasarkan hasil evaluasi telah dilaksanakan,50104,x,x,x,x,v
+5010501,a.,"Pemegang izin prosedur pemantauan, pengukuran kinerja, evaluasi, dan tindak lanjut pengelolaan bahan peledak dan peledakan yang menjelaskan metode, frekuensi, ruang lingkup, dan peralatan yang sesuai (gudang handak, penyimpanan handak, pekerjaan peledakan, pengankutan)",50105,x,v,v,v,v
+5010502,b.,"Pemantauan, pengukuran, dan evaluasi pengelolaan bahan peledak dan peledakan telah dilaksanakan sesuai prosedur",50105,x,x,v,v,v
+5010503,c.,Menetapkan rencana tindak lanjut dan perbaikan berdasarkan hasil evaluasi,50105,x,x,x,v,v
+5010504,d.,Sebagian tindak lanjut dan perbaikan berdasarkan hasil evaluasi telah dilaksanakan,50105,x,x,x,v,v
+5010505,e.,Seluruh tindak lanjut dan perbaikan berdasarkan hasil evaluasi telah dilaksanakan,50105,x,x,x,x,v
+5020100,a.,Pemegang izin memiliki prosedur inspeksi Keselamatan Pertambangan,50200,x,v,v,v,v
+5020200,b.,"Prosedur menjelaskan tujuan, jenis, pelaksana, objek, jadwal dan frekuensi, lembar periksa, peralatan, metode atau tata cara, pelaksanaan, klasifikasi bahaya, laporan, tindak lanjut, evaluasi, dan dokumentasi yang sesuai",50200,x,x,v,v,v
+5020300,c.,"Evaluasi, pelaksanaan inspeksi Keselamatan Pertambangan telah dilaksanakan sesuai prosedur",50200,x,x,x,v,v
+5020400,d.,Hasil inspeksi sebagian didokumentasikan dan dibuat rencana perbaikan,50200,x,x,x,v,v
+5020500,e.,Rencana perbaikan sebagian dilaksanakan,50200,x,x,x,v,v
+5020600,f.,Hasil inspeksi seluruhnya didokumentasikan dan dibuat rencana perbaikan,50200,x,x,x,x,v
+5020700,g.,Rencana perbaikan seluruhnya dilaksanakan,50200,x,x,x,x,v
+5030100,a.,Pemegang izin memiliki prosedur evaluasi kepatuhan,50300,x,v,v,v,v
+5030200,b.,Prosedur telah memadai,50300,x,x,v,v,v
+5030300,c.,Pelaksanaan evaluasi dilakukan sesuai prosedur,50300,x,x,x,v,v
+5030400,d.,Pemegang izin menyusun rencana dan pelaksanaan tindaklanjut berdasarkan hasil evaluasi,50300,x,x,x,v,v
+5030500,e.,Sebagian rencana pelaksanaan perbaikan ditindaklanjuti,50300,x,x,x,x,v
+5040100,a.,Pemegang izin memiliki prosedur,50400,x,v,v,v,v
+5040200,b.,"Prosedur meliputi pelaporan awal, pengamanan lokasi, pembentukan tim penyelidikan, tahapan penyelidikan, tahap evaluasi penyelidikan kecelakaan",50400,x,x,v,v,v
+5040300,c.,Sebagian dilaksanakan sesuai prosedur,50400,x,x,v,v,v
+5040400,d.,"Sebagian didokumentasikan, dikomunikasikan dan dilaksanakan",50400,x,x,v,v,v
+5040500,e.,Seluruhnya dilaksanakan sesuai prosedur,50400,x,x,x,v,v
+5040600,f.,"Seluruh didokumentasikan, dikomunikasikan dan dilaksanakan",50400,x,x,x,x,v
+5050101,a.,"Mencakup sebagian mencakup pelaksanaan perintah, larangan, petunjuk dari KaIT",50501,x,v,v,v,v
+5050102,b.,"Mencakup seluruh mencakup pelaksanaan perintah, larangan, petunjuk dari KaIT",50501,x,x,v,v,v
+5050103,c.,Evaluasi minimal 1x dalam 6 bulan,50501,x,x,v,v,v
+5050104,d.,Hasil evaluasi ditindaklanjuti,50501,x,x,x,v,v
+5050105,e.,"KTT melaksanakan perintah, larangan, petunjuk",50501,x,x,x,x,v
+5050201,a.,"Terdapat kolom waktu, hari, dan jam kecelakaan, tempat kecelakaan, nama, jenis, kelamin, dan umur dari korban kecelakaan, dll (ttd KTT, lapor ke KaIT)",50502,x,v,v,v,v
+5050202,b.,Evaluasi minimal 1x dalam 6 bulan,50502,x,x,v,v,v
+5050203,c.,Hasil evaluasi ditindaklanjuti,50502,x,x,x,v,v
+5050204,d.,"KTT mendaftarkan sebagian kecelakaan tambang yang berakibat cidera ringan, berat, dan mati",50502,x,x,x,x,v
+5050301,a.,Melakukan evaluasi,50503,x,v,v,v,v
+5050302,b.,"Evaluasi tepat waktu, isi sesuai",50503,x,x,v,v,v
+5050303,c.,Evaluasi minimal 1x dalam 6 bulan,50503,x,x,v,v,v
+5050304,d.,Hasil evaluasi ditindaklanjuti,50503,x,x,x,v,v
+5050305,e.,KTT menyampaikan laporan tertulis kepada KaIT sesuai format dan waktu,50503,x,x,x,x,v
+5050401,a.,Melakukan evaluasi,50504,x,v,v,v,v
+5050402,b.,"Evaluasi tepat waktu, isi sesuai",50504,x,x,v,v,v
+5050403,c.,Evaluasi minimal 1x dalam 6 bulan,50504,x,x,v,v,v
+5050404,d.,Hasil evaluasi ditindaklanjuti,50504,x,x,x,v,v
+5050405,e.,"KTT mendokumentasikan sebagian kejadian berbahaya, PAK, PTK telah menggunakan format khusus yang ditentukan oleh KaIT",50504,x,x,x,v,v
+5050406,f.,"KTT mendokumentasikan seluruh kejadian berbahaya, PAK, PTK telah menggunakan format khusus yang ditentukan oleh KaIT",50504,x,x,x,x,v
+5050501,a.,Melakukan evaluasi,50505,x,v,v,v,v
+5050502,b.,Evaluasi mencakup tingkat pemenuhan persyaratan dan pelaksanaan tindak lanjut,50505,x,x,v,v,v
+5050503,c.,Evaluasi minimal 1x dalam 6 bulan,50505,x,x,x,v,v
+5050504,d.,Hasil evaluasi ditindaklanjuti,50505,x,x,x,x,v
+5060100,a.,Pemegang izin melakukan audit minimal 1 tahun sekali,50600,x,v,v,v,v
+5060200,b.,Pemegang izin mempunyai prosedur,50600,x,v,v,v,v
+5060300,c.,"Prosedur terpadat ruang lingkup, frekuensi, metodologi, kompetensi auditor, tanggung jawab dan persyaratan pelaksanaan audit, serta pelaporan hasil audit",50600,x,x,v,v,v
+5060400,d.,Pelaksanaan audit dilakukan sesuai prosedur,50600,x,x,x,v,v
+5060500,e.,"Hasil audit didokumentasikan, dibuat rencana tindak lanjut, dan dilaksanakan",50600,x,x,x,x,v
+5070100,a.,Memiliki prosedur kerja,50700,x,v,v,v,v
+5070200,b.,"Prosedur memadai (identifikasi, analisa penyebab, tindakan pencegahan, hasil tindakan pecegahan, tindak lanjut)",50700,x,x,v,v,v
+5070300,c.,Pelaksanaan dilakukan sesuai prosedur,50700,x,x,x,v,v
+5070400,d.,Pelaksanaan sebagian didokumentasikan dan dilaksanakan,50700,x,x,x,v,v
+5070500,e.,Pelaksanaan seluruhnya didokumentasikan dan dilaksanakan,50700,x,x,x,x,v
+6010100,a.,Pemegang izin mempunyai manual SMKP,60100,x,v,v,v,v
+6010200,b.,"Manual SMKP mencakup ruang lingkup, prosedur terdokumentasi",60100,x,x,v,v,v
+6010300,c.,Disahkan oleh pemegang izin,60100,x,x,v,v,v
+6010400,d.,Disosialisasikan kepada seluruh departemen dari pekerja,60100,x,x,x,v,v
+6010500,e.,Secara konsisten digunakan dalan penyusunan level selanjutnya,60100,x,x,x,x,v
+6020100,a.,Pemegang izin mempunyai prosedur pengendalian dokumen,60200,x,v,v,v,
+6020200,b.,"Prosedur meliputi pengeluaran, pengendalian, perubahan, identifikasi dan pengelolaan dr luar",60200,x,x,v,v,
+6020300,c.,Diterapkan secara konsisten,60200,x,x,x,v,
+6030100,a.,Pemegang izin mempunyai prosedur pengendalian rekaman,60300,x,v,v,v,
+6030200,b.,"Prosedur meliputi identifikasi, penyimpanan, perlindungan, akses, penentuan masa simpan dan pemusnahan",60300,x,x,v,v,
+6030300,c.,Diterapkan secara konsisten,60300,x,x,x,v,
+6030400,d.,"Rekaman didokumentasikan dgn konsisten sehingga dpt dibaca, diidentifikasi dan ditelusuri",60300,x,x,x,v,
+6040100,a.,Pemegang izin menetapkan jenis dokumen dan rekaman yg mencakup sebagian elemen SMKP,60400,x,v,v,,
+6040200,b.,Pemegang izin menetapkan jenis dokumen dan rekaman yg mencakup seluruh elemen SMKP,60400,x,x,v,,
+7010100,a.,Pemegang izin melakukan RTM,70100,x,v,v,v,v
+7010200,b.,Dilakukan terencana minimal 1 tahun sekali,70100,x,x,v,x,v
+7010300,c.,RTM dilakukan pimpinan tertinggi,70100,x,x,x,v,v
+7020100,a.,Pemegang izin mendokumentasikan hasil tinjauan manajemen,70200,x,v,v,,
+7020200,b.,"Tinjauan manajemen meliputi : kebijakan KP, hasil audit, daftar risiko, kepatuhan peraturan, tindak lanjut RTM sebelumnya, tingkat pencapaian KP, kecelakaan, kejadian berbahaya, PAK, PTK",70200,x,x,v,,
+7030100,a.,Menghasilkan keputusan dan tindakan yg berhubungan dgn efektifitas sistem manajemen,70300,x,v,v,,
+7030200,b.,"Mempertimbangkan : kebijkan KP, kinerja KO sumberdaya, elemen2 lain SMKP",70300,x,x,v,,
+7040100,a.,"Didokumentasikan, dilaporkan ke pihak2 berkepentingan",70400,x,v,v,,
+7040200,b.,Dikomunikasikan kepada yg memerlukan,70400,x,x,v,,
+7050100,a.,Melaksanakan peningkatan kinerja,70500,x,v,,,
+7060100,a.,Pemegang izin menggunakan sebagian tinjauan dari tindak lanjut sbg dasar dlm penentuan kebijakan,70600,x,v,v,,
+7060200,b.,Pemegang izin menggunakan seluruh tinjauan dari tindak lanjut sbg dasar dlm penentuan kebijakan,70600,x,x,v,,

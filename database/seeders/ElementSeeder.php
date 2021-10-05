@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Element;
 use Illuminate\Database\Seeder;
-use App\Models\requirement;
 
-class RequirementSeeder extends Seeder
+class ElementSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,23 +14,18 @@ class RequirementSeeder extends Seeder
      */
     public function run()
     {
-        requirement::truncate();
+        Element::truncate();
 
-        $csvFile = fopen(public_path("data/data.csv"), "r");
+        $csvFile = fopen(public_path("data/element.csv"), "r");
 
         $firstline = true;
         while (($data = fgetcsv($csvFile, 2000, ",")) !== FALSE) {
             if (!$firstline) {
-                requirement::create([
+                Element::create([
                     "id" => $data['0'],
                     "number" => $data['1'],
                     "title" => $data['2'],
-                    "element_id" => $data['3'],
-                    "n0" => $data['4'],
-                    "n1" => $data['5'],
-                    "n2" => $data['6'],
-                    "n3" => $data['7'],
-                    "n4" => $data['8'],
+                    "n_elemen" => $data['3']
                 ]);
             }
             $firstline = false;

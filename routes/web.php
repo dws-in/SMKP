@@ -15,13 +15,13 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::resource('users', UserController::class);
+
+
+Route::group(['middleware' => 'auth'], function () {
+  Route::resource('users', UserController::class);
 Route::resource('supports', SupportController::class);
 Route::resource('smkp', SMKPController::class);
 Route::resource('audits', AuditController::class);
 Route::resource('report', ReportController::class);
 Route::resource('result', UserReportController::class);
-
-Route::group(['middleware' => 'auth'], function () {
-
 });

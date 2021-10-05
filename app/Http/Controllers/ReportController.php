@@ -36,7 +36,8 @@ class ReportController extends Controller
         $data = DB::table('answer')
             ->leftJoin('requirements', 'requirements.id', '=', 'answer.id_req')
             ->select('answer.jawaban as value', 'requirements.title as rule', 'answer.id_req as kode')
-            ->where('answer.id_el', '=', $id)
+            ->where('answer.id_el', '=', substr($id,0,5))
+            ->where('answer.id_answer', '=', substr($id,5,12))
             ->get();
 
         return view('report.user')->with('data', $data);
