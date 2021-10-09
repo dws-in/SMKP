@@ -9,7 +9,7 @@ class requirement extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'number', 'title', 'element_id', 'n0', 'n1', 'n1', 'n2', 'n3'];
+    protected $fillable = ['id', 'number', 'title', 'element_id', 'n0', 'n1', 'n2', 'n3', 'n4'];
 
     public $timestamps = false;
 }
